@@ -79,8 +79,45 @@ html {
 /* Main part */
 
 .main {
+    width: 80vw;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 1fr;
     grid-area: main;
     }
+
+    .general {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .general__text {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .general__img {
+        width: 50%;
+        position: relative;
+        
+    }
+
+    .general__button {
+        position: absolute;
+        background-color: white;
+        border: none;
+        top: 91%;
+        left: 0%;
+        cursor: pointer;
+        height: 71px;
+        width: 222px;
+        
+    }
+
+
 
    /* Footer */
 
@@ -201,6 +238,13 @@ margin-bottom: 40px;
     width: 100vw;  
     background-color: #2C2C2C;
     padding-top: 25px;
+}
+
+
+.footer__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
 }
 
 /* Mobile styles */
