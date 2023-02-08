@@ -12,19 +12,36 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__content">
-          <div class="logo-small">
-            <img src="assets/img/logo/logo-small.png" alt="logo" />
-          </div>
+          <picture class="header__logo">
+            <source
+              class="header__logo-big"
+              srcset="assets/img/logo/header__logo-big.png"
+              media="(max-width: 1023px)"
+            />
+             <img
+              class="header__logo-small"
+              src="assets/img/logo/logo-small.png"
+              alt="logo"
+            />
+          </picture>
 
           <nav class="nav">
-            <ul class="menu">
-              <a class="menu__item menu__item-1" href="#"><li>MAIN</li></a>
-              <a class="menu__item menu__item-2" href="#"><li>GALLERY</li></a>
-              <a class="menu__item menu__item-3" href="#"><li>PROJECTS</li></a>
-              <a class="menu__item menu__item-4" href="#"
+            <ul class="header__menu">
+              <a class="header__menu-item header__menu-item-1" href="#"
+                ><li>MAIN</li></a
+              >
+              <a class="header__menu-item header__menu-item-2" href="#"
+                ><li>GALLERY</li></a
+              >
+              <a class="header__menu-item header__menu-item-3" href="#"
+                ><li>PROJECTS</li></a
+              >
+              <a class="header__menu-item header__menu-item" href="#"
                 ><li>CERTIFICATIONS</li></a
               >
-              <a class="menu__item menu__item-5" href="#"><li>CONTACTS</li></a>
+              <a class="header__menu-item header__menu-item-5" href="#"
+                ><li>CONTACTS</li></a
+              >
             </ul>
           </nav>
         </div>
@@ -37,26 +54,26 @@
         <div class="footer__content">
           <!-- Footer Logo -->
 
-          <div class="logo-big">
+          <div class="footer__logo-big">
             <img src="assets/img/logo/logo-big.png" alt="logo" />
           </div>
 
           <!-- Footer Nav -->
-          <div class="footer__nav">
+          <nav class="footer__nav">
+            <p class="footer__title footer__nav-title">Information</p>
             <ul class="footer__nav-list">
-              <p class="footer__nav-title">Information</p>
               <li>Main</li>
               <li>Gallery</li>
               <li>Projects</li>
               <li>Certifications</li>
               <li>Contacts</li>
             </ul>
-          </div>
+          </nav>
 
           <!-- Footer Contacts -->
 
           <div class="footer__contacts">
-            <p class="footer__contacts-title">Contacts</p>
+            <p class="footer__title footer__contacts-title">Contacts</p>
 
             <div class="footer__address">
               <div class="footer__address-img">
@@ -95,7 +112,7 @@
           <!-- Footer Socials -->
 
           <div class="footer__socials">
-            <p class="footer__socials-title">Social Media</p>
+            <p class="footer__title footer__socials-title">Social Media</p>
             <div class="footer__socials-icons-all">
               <img
                 class="footer__socials-icon"
