@@ -61,9 +61,7 @@ margin-top: 0.5em;
 
 .header__nav {
     display: flex;
-    justify-content: flex-start;
-    margin-right: auto;
-    
+    justify-content: flex-start; 
 }
 
 .header__menu {
@@ -95,6 +93,8 @@ margin-top: 0.5em;
 
 /* Main part */
 
+/* General section */
+
 .main {
     width: 80vw;
     display: flex;
@@ -107,18 +107,36 @@ margin-top: 0.5em;
 .general {
     display: flex;
     flex-direction: row;
-    justify-content: center;  
+    justify-content: center; 
+    margin-bottom: 5em;
+
 }
 
 .general__title {
-    width: 25%; 
+    width: 35%; 
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: flex-start;
+   margin-right: 10px;
+}
+
+.h1-title-1 {
+color: #BDBDBD;
+font-weight: 300;
+font-size: 2em;
+text-transform: uppercase;
+}
+
+.h1-title-2 {
+color:  #333333;
+font-weight: 700;
+font-size: 2em;
+text-transform: uppercase;
 }
 
 .general__img-block {
-    width: 75%;
+    width: 65%;
     position: relative;
 }
 
@@ -134,6 +152,8 @@ margin-top: 0.5em;
     width: 14em;
     background-color: #FFFFFF;
     color: #333333;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 
 .button-color2 {
@@ -143,14 +163,87 @@ margin-top: 0.5em;
     width: 14em;
     background-color: #333333;
     color:  #FFFFFF;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 
 .general__button-color1 {
     position: absolute;
     left: 0;
     bottom: 0;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 
+/* About section */
+
+.about {
+    width: 80vw;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-areas: 
+    "about__img"
+    "about__text";
+    margin-bottom: 5em;
+    column-gap: 3.2em;
+}
+
+
+.about__img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "wrapper__about__img-1 wrapper__about__img-3"
+    "wrapper__about__img-1 wrapper__about__img-3"
+    "wrapper__about__img-2 wrapper__about__img-3";
+    column-gap: 3.2em;
+    row-gap: 0.6em;
+}
+
+.wrapper__about__img-1 {
+    grid-area: wrapper__about__img-1;
+    
+}
+
+.wrapper__about__img-2 {
+    grid-area: wrapper__about__img-2;
+
+}
+
+.wrapper__about__img-3 {
+    grid-area: wrapper__about__img-3;
+    display: flex;
+    align-items: center;
+}
+
+.about__img-1 {
+    width: 100%;
+}
+
+.about__img-2 {
+    width: 100%; 
+}
+
+.about__img-3 {
+    width: 100%;
+}
+
+.about__text {
+    color: #000000;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-top: 1em 
+    
+}
+
+.h2-title {
+    color: #BDBDBD;
+    font-weight: 300;
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
    /* Footer */
 
 .footer {
@@ -296,6 +389,8 @@ html, body {
 
 /* Main */
 
+/* General section */
+
 .main {
     width: 100vw;
     display: flex;
@@ -310,8 +405,28 @@ html, body {
     flex-direction: column;
 }
 
+
 .general__title {
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-bottom: 0.5em;   
+}
+
+.h1-title-1 {
+color: #BDBDBD;
+font-weight: 300;
+font-size: 1em;
+padding-right: 0.5em;
+text-transform: uppercase; 
+}
+
+.h1-title-2 {
+color:  #333333;
+font-weight: 700;
+font-size: 1em;
+text-transform: uppercase; 
 }
 
 .general__img-block {
@@ -330,12 +445,45 @@ height: auto;
     width: 14em;
     background-color: #FFFFFF;
     color: #333333;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 
 .general__button-color1 {
     position: absolute;
     left: 0;
     bottom: 0;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* About section */
+.about {
+    width: 100vw;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "about__img"
+    "about__text";
+}
+
+.about__text {
+    color: #000000;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.6em;
+    text-align: center;
+    margin-top: 1em;
+    
+}
+
+.h2-title {
+    color: #BDBDBD;
+    font-weight: 300;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-align: center;
 }
 
 /* Footer */
@@ -425,28 +573,46 @@ margin-bottom: 20px;
     
     
     /* Main */
+
+    /* General section */
     
     .main {
         width: 100vw;
         display: flex;
         flex-direction: column;
         justify-self: center;
-        grid-area: main;
-        
-    }
+        grid-area: main;        
+}
     
     .general {
         width: 100vw;
         display: flex;
         flex-direction: column;
-    }
-    
-    .general__title {
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+}
+
+.general__title {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-bottom: 0.5em;  
+}
+
+.h1-title-1 {
+color: #BDBDBD;
+font-weight: 300;
+font-size: 0.5em;
+padding-right: 0.5em;
+text-transform: uppercase; 
+
+}
+
+.h1-title-2 {
+color:  #333333;
+font-weight: 700;
+font-size: 0.5em;
+text-transform: uppercase; 
+}
     
     .general__img {
     width: 100vw;
@@ -459,13 +625,47 @@ margin-bottom: 20px;
         width: 14em;
         background-color: #FFFFFF;
         color: #333333;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
     }
     
     .general__button-color1 {
         position: absolute;
         left: 0;
         bottom: 0;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
     }
+
+    /* About section */
+.about {
+    width: 100vw;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "about__img"
+    "about__text";
+}
+
+.about__text {
+    color: #000000;
+    font-weight: 300;
+    font-size: 0.8em;
+    line-height: 1.6em;
+    text-align: center;
+    margin: 1em 1em;
+
+    
+}
+
+.h2-title {
+    color: #BDBDBD;
+    font-weight: 300;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
     
     
     /* Footer */
