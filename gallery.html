@@ -7,62 +7,116 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/styles/normalize.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/gallery.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper_gallery">
       <!-- Header -->
 
-      <header class="header"></header>
+      <header class="header">
+        <div class="header__content">
+          <div class="header__logo-container">
+            <picture class="header__logo">
+              <source
+                class="header__logo-big"
+                srcset="assets/img/logo/header__logo-big.png"
+                media="(max-width: 1023px)"
+              />
+
+              <img
+                class="header__logo-small"
+                src="assets/img/logo/logo-small.png"
+                alt="logo"
+              />
+            </picture>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <li>
+                <a class="header__menu-item header__menu-item-1" href="#"
+                  >MAIN</a
+                >
+              </li>
+              <li>
+                <a class="header__menu-item header__menu-item-2" href="#"
+                  >GALLERY</a
+                >
+              </li>
+              <li>
+                <a class="header__menu-item header__menu-item-3" href="#"
+                  >PROJECTS</a
+                >
+              </li>
+              <li>
+                <a class="header__menu-item header__menu-item" href="#"
+                  >CERTIFICATIONS</a
+                >
+              </li>
+              <li>
+                <a class="header__menu-item header__menu-item-5" href="#"
+                  >CONTACTS</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
       <!-- Main -->
 
-      <main class="main">
-        <section class="main_name_page">Photo Gallery</section>
-        <section class="main_card">
+      <main class="main_gallery">
+        <section class="main_gallery_general">
+          <h1 class="main_general_title">
+            <span class="general_h1-title-1">Photo</span>
+            <span class="general_h1-title-2">Gallery</span>
+          </h1>
+        </section>
+        <hr class="main_hr_link" />
+        <section class="main_gallery_card">
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 22-min.jpg"
-            alt="Картинка_1"
+            alt="Picture_1"
           />
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 23-min.jpg"
-            alt="Картинка_2"
+            alt="Picture_2"
           />
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 24-min.jpg"
-            alt="Картинка_3"
+            alt="Picture_3"
           />
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 25-min.jpg"
-            alt="Картинка_4"
+            alt="Picture_4"
           />
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 26-min.jpg"
-            alt="Картинка_5"
+            alt="Picture_5"
           />
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 27-min.jpg"
-            alt="Картинка_6"
+            alt="Picture_6"
           />
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 28-min.jpg"
-            alt="Картинка_7"
+            alt="Picture_7"
           />
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 29-min.jpg"
-            alt="Картинка_8"
+            alt="Picture_8"
           />
           <img
             class="main_card_item"
             src="/assets/img/page-gallery/Rectangle 30-min.jpg"
-            alt="Картинка_"
+            alt="Picture_9"
           />
         </section>
         <section></section>
@@ -70,7 +124,119 @@
 
       <!-- Footer -->
 
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__content">
+          <!-- Footer Logo -->
+
+          <div class="footer__logo-big">
+            <img src="assets/img/logo/logo-big.png" alt="logo" />
+          </div>
+
+          <!-- Footer Nav -->
+          <nav class="footer__nav">
+            <a class="footer__link" href="#"
+              ><p class="footer__title footer__nav-title">Information</p></a
+            >
+            <ul class="footer__nav-list">
+              <li><a class="footer__link" href="#">Gallery</a></li>
+              <li><a class="footer__link" href="#">Projects</a></li>
+              <li><a class="footer__link" href="#">Main</a></li>
+              <li><a class="footer__link" href="#">Certifications</a></li>
+              <li><a class="footer__link" href="#">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <!-- Footer Contacts -->
+
+          <div class="footer__contacts">
+            <a class="footer__link" href="#"
+              ><p class="footer__title footer__contacts-title">Contacts</p></a
+            >
+
+            <a class="footer__link" href="#"
+              ><div class="footer__address">
+                <div class="footer__address-img">
+                  <img
+                    src="assets/img/footer/contacts/address.png"
+                    alt="address-icon"
+                  />
+                </div>
+
+                <p class="footer__address-text">
+                  1234 Sample Street <br />
+                  Austin Texas 78704
+                </p>
+              </div></a
+            >
+
+            <a class="footer__link" href="#"
+              ><div class="footer__tel">
+                <div class="footer__tel-img">
+                  <img
+                    src="assets/img/footer/contacts/tel.png"
+                    alt="tel-icon"
+                  />
+                </div>
+
+                <p class="footer__tel-text">512.333.2222</p>
+              </div></a
+            >
+
+            <a class="footer__link" href="#"
+              ><div class="footer__email">
+                <div class="footer__email-img">
+                  <img
+                    src="assets/img/footer/contacts/email.png"
+                    alt="email-icon"
+                  />
+                </div>
+
+                <p class="footer__email-text">sampleemail@gmail.com</p>
+              </div></a
+            >
+          </div>
+
+          <!-- Footer Socials -->
+
+          <div class="footer__socials">
+            <a class="footer__link" href="#">
+              <p class="footer__title footer__socials-title">Social Media</p></a
+            >
+            <div class="footer__socials-icons-all">
+              <a class="footer__link" href="#"
+                ><img
+                  class="footer__socials-icon"
+                  src="assets/img/socials/facebook.png"
+                  alt="facebook-icon"
+              /></a>
+
+              <a class="footer__link" href="#"
+                ><img
+                  class="footer__socials-icon"
+                  src="assets/img/socials/twitter.png"
+                  alt="twitter-icon"
+              /></a>
+
+              <a class="footer__link" href="#"
+                ><img
+                  class="footer__socials-icon"
+                  src="assets/img/socials/linkedin.png"
+                  alt="linkedin-icon"
+              /></a>
+
+              <a class="footer__link" href="#"
+                ><img
+                  class="footer__socials-icon"
+                  src="assets/img/socials/pininterest.png"
+                  alt="pinterest-icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="footer__copyright">&copy; 2021 All Rights Reserved</div>
+      </footer>
     </div>
   </body>
 </html>
