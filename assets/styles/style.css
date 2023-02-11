@@ -230,12 +230,12 @@ text-transform: uppercase;
 }
 
 .about__text {
+    width: 80%;
     color: #000000;
     font-weight: 300;
     font-size: 1em;
     line-height: 1.6em;
-    margin-top: 1em 
-    
+    margin-top: 16px;   
 }
 
 .h2-title {
@@ -244,6 +244,41 @@ text-transform: uppercase;
     font-size: 4em;
     margin-bottom: 0.5em;
 }
+
+
+/* Mission section */
+.mission__content {
+    display: flex;
+    flex-direction: row;
+    gap: 9.4em;
+}
+
+.mission__part {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6em;
+} 
+
+.mission__number {
+    color: #F2F2F2;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12em;
+    align-items: center;
+
+}
+
+.mission__text {
+    color: #333333;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    word-wrap: break-word;
+    width: 65%;
+}
+
    /* Footer */
 
 .footer {
@@ -666,6 +701,8 @@ text-transform: uppercase;
     margin-bottom: 0.5em;
     text-align: center;
 }
+
+
     
     
     /* Footer */
