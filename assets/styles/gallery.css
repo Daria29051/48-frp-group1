@@ -140,3 +140,7 @@ html, body {
     color: black;
     font-weight: bold;
 }
+
+@media screen and (min-width:249px) and (max-width:375px) {
+    
+}
