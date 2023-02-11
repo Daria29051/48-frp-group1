@@ -118,7 +118,7 @@ margin-top: 0.5em;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-   margin-right: 10px;
+    margin-right: 10px;
 }
 
 .h1-title-1 {
@@ -241,23 +241,29 @@ text-transform: uppercase;
 .h2-title {
     color: #BDBDBD;
     font-weight: 300;
-    font-size: 4em;
+    font-size: 3.5em;
     margin-bottom: 0.5em;
 }
 
 
 /* Mission section */
+
 .mission__content {
     display: flex;
     flex-direction: row;
-    gap: 9.4em;
+    gap: 3.5em;
 }
 
+.mission__title {
+    display: flex;
+    flex-wrap: nowrap;
+}
 .mission__part {
     display:flex;
     flex-direction: row;
     align-items: center;
     gap: 1.6em;
+    width: 50%;
 } 
 
 .mission__number {
@@ -273,11 +279,12 @@ text-transform: uppercase;
     color: #333333;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.4em;
+    font-size: 1em;
     line-height: 1.5em;
     word-wrap: break-word;
-    width: 65%;
+    width: 100%;
 }
+
 
    /* Footer */
 
@@ -500,8 +507,17 @@ height: auto;
     grid-template-rows: auto auto;
     grid-template-areas: 
     "about__img"
-    "about__text";
+    "about__text-part";
 }
+
+.about__text-part {
+    grid-area: about__text-part;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 
 .about__text {
     color: #000000;
@@ -513,13 +529,62 @@ height: auto;
     
 }
 
+
 .h2-title {
     color: #BDBDBD;
     font-weight: 300;
     font-size: 3em;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
     text-align: center;
 }
+
+
+
+
+/* Mission section */
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission__content {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.mission__part {
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    padding: 0 20px;
+ 
+    
+} 
+
+.mission__title {
+    padding: 0 1em;
+}
+
+.mission__number {
+    width: fit-content;
+    font-size: 6em;
+}
+
+.mission__text {
+    width: fit-content;
+    font-size: 1em; 
+    word-wrap: break-word;
+    width: 85%;
+
+}
+
+
 
 /* Footer */
 
@@ -673,6 +738,8 @@ text-transform: uppercase;
     }
 
     /* About section */
+
+
 .about {
     width: 100vw;
     display: grid;
@@ -680,29 +747,81 @@ text-transform: uppercase;
     grid-template-rows: auto auto;
     grid-template-areas: 
     "about__img"
-    "about__text";
+    "about__text-part";
+    margin-bottom: 0;
 }
+
+.about__text-part {
+    grid-area: about__text-part;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 
 .about__text {
     color: #000000;
     font-weight: 300;
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 1.6em;
     text-align: center;
-    margin: 1em 1em;
-
+    margin-top: 1em;
     
 }
+
 
 .h2-title {
     color: #BDBDBD;
     font-weight: 300;
     font-size: 2em;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
     text-align: center;
 }
 
 
+/* Mission section */
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission__content {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.mission__part {
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    padding: 0 20px;
+ 
+    
+} 
+
+.mission__title {
+    padding: 0 1em;
+}
+
+.mission__number {
+    width: fit-content;
+    font-size: 4em;
+}
+
+.mission__text {
+    width: fit-content;
+    font-size: 0.7em; 
+    word-wrap: break-word;
+    width: 85%;
+
+}
     
     
     /* Footer */
