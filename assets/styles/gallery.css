@@ -17,7 +17,7 @@ html, body {
 
 .main__gallery {
     display: grid;
-    height: 140vh;
+    min-height: 140vh;
     grid-template-columns: 1fr;
     grid-template-rows: 20% 4% 60% 10%;
     grid-template-areas: "header_gallery"
@@ -145,13 +145,13 @@ html, body {
 /* Change main screen # 1 */
 
 
-@media screen and (min-width:249px) and (max-width:750px) {
+@media screen and (min-width:249px) and (max-width:755px) {
    
     .main__gallery {
         display: grid;
-        height: 450vh;
+        min-height: 420vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 5% 1.5% 88.5% 5%;
+        grid-template-rows: 5% 1.5% auto 25vh;
         grid-template-areas: "header_gallery"
                              "header_gallery_hr"
                              "main_gallery"
@@ -186,7 +186,7 @@ html, body {
     }
 
     .main__gallery__button__1 {
-        margin-left: -5vh;
+        margin-left: 4vh;
     }
     
     .main__gallery__button__2 {
@@ -194,20 +194,22 @@ html, body {
     }
 
     .main__gallery__button__1, .main__gallery__button__2 {
-        margin-top: 3vh;
+        display: grid;
+        margin-top: 4vh;
+        align-content: center;
     }
 }
 
 /* Change main screen # 2 */
 
 
-@media screen and (min-width:751px) and (max-width:987px) {
+@media screen and (min-width:756px) and (max-width:1000px) {
    
     .main__gallery {
         display: grid;
-        height: 280vh;
+        min-height: 290vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 30vh 8vh auto 20vh;
+        grid-template-rows: 30vh 8vh auto 25vh;
         grid-template-areas: "header_gallery"
                              "header_gallery_hr"
                              "main_gallery"
@@ -253,11 +255,11 @@ html, body {
 /* Change main screen # 3 */
 
 
-@media screen and (min-width:988px) and (max-width:1023px) {
+@media screen and (min-width:1001px) and (max-width:1490px) {
    
     .main__gallery {
         display: grid;
-        height: 210vh;
+        min-height: 190vh;
         grid-template-columns: 1fr;
         grid-template-rows: 30vh 8vh auto 20vh;
         grid-template-areas: "header_gallery"
