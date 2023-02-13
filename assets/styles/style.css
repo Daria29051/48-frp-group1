@@ -662,9 +662,62 @@ height: auto;
     font-size: 1em; 
     word-wrap: break-word;
     width: 85%;
-
 }
 
+/* Projects-overview section */
+
+.projects-overview {
+    display: grid;
+    align-self: center;   
+}
+
+.projects-overview__title {
+    display: flex;
+    justify-content: center;
+}
+
+
+.projects-overview__gallery {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
+}
+
+.projects-overview__img-1 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    width: 100%;
+}
+
+
+.projects-overview__img-2 {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    width: 100%;
+}
+
+.projects-overview__img-3 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    width: 100%;  
+}
+
+.projects-overview__img-4 {
+    grid-row: 3/4;
+    grid-column: 1/3;
+    width: 100%; 
+}
+
+.projects-overview__img-5 {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    width: 100%;
+}
+
+.projects-overview__button-wrapper {
+    display: flex;
+    justify-content: center;
+}
 
 
 /* Footer */
@@ -903,6 +956,65 @@ text-transform: uppercase;
     word-wrap: break-word;
     width: 85%;
 
+}
+
+/* Projects-overview section */
+
+.projects-overview {
+    display: grid;
+    align-self: center;   
+}
+
+.projects-overview__title {
+    display: flex;
+    justify-content: center;
+}
+
+
+.projects-overview__gallery {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
+}
+
+.projects-overview__img-1 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    width: 100%;
+}
+
+
+.projects-overview__img-2 {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    width: 100%;
+}
+
+.projects-overview__img-3 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    width: 100%;  
+}
+
+.projects-overview__img-4 {
+    grid-row: 3/4;
+    grid-column: 1/3;
+    width: 100%; 
+}
+
+.projects-overview__img-5 {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    width: 100%;
+}
+
+.projects-overview__button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-overview__button {
+    font-size: 0.5em;
 }
     
     
