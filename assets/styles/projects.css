@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+html, body {
+    overflow-x: hidden;  
+}
+
+.main__projects {
+    display: grid;
+    width: 80vw;
+    /*height: 10px; изменить или убрать эту высоту?
+    min-height: calc(100vh - 80px);*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*уточнить размер*/
+    /*justify-content: start; поведение объекта в ячейке - у меня не видно изменений, удалить?*/
+    justify-self: center; /*выравнивание по центру вертикальной оси в ячейке - выравнивает весь блок по центру страницы*/
+    /*background-color: blueviolet;*/
+    /*grid-area: main;*/
+}    
+
+.main__projects__general { /*Заголовок*/
+    display: grid;
+    /*grid-area: header_projects;*/
+    width: 100%; /*визуально ок, но родительский и детский - 80vw*/
+    /*padding-left: 2vh;*/
+    align-items: start;
+    /*background-color: rgb(43, 107, 226); синий?*/
+}
+
+.main__projects__line {
+    width: 80vw;
+    height: 1px;
+    display: grid;
+    justify-self: stretch; 
+    background-color:rgb(242, 242, 242);/*rgb(252, 0, 147); розовый*/
+    margin-bottom: 2%;
+}
+
+.main__projects__samples {
+    display: grid;
+    justify-self: stretch;
+    justify-content: start;
+    justify-items: center;
+    /*background-color: rgb(153, 62, 238); фиолетовый*/
+    grid-template-columns: 57% 43%;
+    grid-auto-rows: minmax(100px, auto);
+    /*grid-template-rows: % % % %;*/
+    grid-row-gap: 4%;
+    grid-template-areas:
+            "img1 txt1"
+            "img2 txt2"
+            "img3 txt3"
+}
+
+/*
+.wrapper__projects__sample-1 {
+    grid-area: wrapper__about__img-3;
+    display: flex;
+    align-items: center;
+}
+*/
+
+
+.main__projects__samples__image1,
+.main__projects__samples__image2,
+.main__projects__samples__image3, {
+    /*grid-area: img;*/
+    justify-self: left;
+    background-color: rgb(4, 250, 78);
+    /*background-image: url("assets/img/page-projects/sample-project1.png");*/
+}
+ 
+.main__projects__samples__text1,
+.main__projects__samples__text2,
+.main__projects__samples__text3 {
+    align-items: left;
+    /*grid-area: txt;*/
+    /*background-color: rgb(255, 231, 11);  */ 
+} . /*сравнить цвет с фигмой*/
+
+.main__projects__samples__image1 {
+    grid-area: img1;
+    justify-self: left;
+    width: 670px;
+    height: 435px;
+    background-color: rgb(250, 4, 4);
+
+
+}
+.main__projects__samples__text1 {
+    grid-area: txt1;
+    align-items: left;
+    padding: 10px;
+    background-color: rgb(255, 121, 11); 
+} 
+
+.main__projects__samples__image2 {
+    grid-area: img2;
+    justify-self: left;
+    width: 670px;
+    height: 435px;
+    background-color: rgb(250, 234, 4);
+
+}
+
+.main__projects__samples__text2 {
+    grid-area: txt2;
+    align-items: left;
+    padding: 10px;
+    background-color: rgb(52, 255, 11); 
+}
+
+.main__projects__samples__image3 {
+    grid-area: img3;
+    justify-self: left;
+    width: 670px;
+    height: 435px;
+    background-color: rgb(4, 131, 250);
+
+}
+.main__projects__samples__text3 {
+    grid-area: txt3;
+    align-items: left;
+    padding: 10px;
+    background-color: rgb(178, 11, 255); 
+}
