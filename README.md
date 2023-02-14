@@ -1,5 +1,5 @@
 # Architecture company site
-![image](https://user-images.githubusercontent.com/119353066/218860950-6500b354-8a3f-416d-98d1-4ae4863c79f4.png)
+![logo for readme](https://user-images.githubusercontent.com/119353066/218862958-a48cbe9a-65f5-4807-ab2f-3cbef914eaa8.png)
  
 ## Функционал сайта
  + Посещение платформы в качестве гостя.
