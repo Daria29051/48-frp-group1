@@ -14,121 +14,108 @@ html, body {
 .projects {
     display: grid;
     width: 80vw;
-    /*height: 10px; изменить или убрать эту высоту?
-    min-height: calc(100vh - 80px);*/
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*уточнить размер*/
+    grid-template-rows: 10% 2% auto 10%;
+    grid-template-areas:
+    "general__title"
+    "projects__line"
+    "projects__samples"
+    "slider";
+
+    justify-self: center;
+    /*justify-content: center;*/
     /*justify-content: start; поведение объекта в ячейке - у меня не видно изменений, удалить?*/
-    justify-self: center; /*выравнивание по центру вертикальной оси в ячейке - выравнивает весь блок по центру страницы*/
+    /*justify-self: center; выравнивание по центру вертикальной оси в ячейке - выравнивает весь блок по центру страницы*/
     /*background-color: blueviolet;*/
     /*grid-area: main;*/
 }    
 
-.projects__general { /*Заголовок*/
-    display: grid;
-    /*grid-area: header_projects;*/
-    width: 100%; /*визуально ок, но родительский и детский - 80vw*/
-    /*padding-left: 2vh;*/
-    align-items: start;
-    /*background-color: rgb(43, 107, 226); синий?*/
+.general_title {
+    grid-area: general_title;
 }
 
 .projects__line {
+    grid-area: projects__line;
+    display: grid;
     width: 80vw;
     height: 1px;
-    display: grid;
     justify-self: stretch; 
-    background-color:rgb(242, 242, 242);/*rgb(252, 0, 147); розовый*/
-    margin-bottom: 2%;
+    background-color:rgb(242, 242, 242);
 }
 
-/* Убрали с Дашей .pojects__samples {
+.projects__samples {
+    grid-area: projects__samples;
     display: grid;
-    justify-self: stretch;
-    justify-content: start;
-    justify-items: center;
-    /*background-color: rgb(153, 62, 238); фиолетовый*/
-    grid-template-columns: 57% 43%;
-    grid-auto-rows: minmax(100px, auto);
-    /*grid-template-rows: % % % %;
-    grid-row-gap: 4%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-            "img1 txt1"
-            "img2 txt2"
-            "img3 txt3";
-    grid-auto-flow: row;
-}*/
+    "projects__sample1"
+    "projects__sample2"
+    "projects__sample3";
+}
 
-/*
-.wrapper__projects__sample-1 {
-    grid-area: wrapper__about__img-3;
+.slider {
+    grid-area: slider;
     display: flex;
-    align-items: center;
-}
-*/
-
-
-.projects__image1,
-.projects__image2,
-.projects__image3, {
-    /*grid-area: img;*/
-    justify-self: left;
-    background-color: rgb(4, 250, 78);
-    /*background-image: url("assets/img/page-projects/sample-project1.png");*/
-}
- 
-.projects__text1,
-.projects__text2,
-.projects__text3 {
-    align-items: left;
-    /*grid-area: txt;*/
-    /*background-color: rgb(255, 231, 11);  */ 
-} . /*сравнить цвет с фигмой*/
-
-.projects__image1 {
-    grid-area: img1;
-    justify-self: left;
-    width: 670px;
-    height: 435px;
-    background-color: rgb(250, 4, 4);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: flex-end;
+    /*justify-self: flex-start;
+    justify-content: flex-start; - не работает*/
+    flex-direction: row;
+    background-color: aquamarine;
+    margin-bottom: 7em;
 }
 
-.projects__text1 {
-    grid-area: txt1;
-    align-items: left;
-    align-self: center;
-    padding: 5% 5% 5% 5%;
-    background-color: rgb(255, 121, 11); 
-} 
-
-.projects__image2 {
-    grid-area: img2;
-    justify-self: left;
-    width: 670px;
-    height: 435px;
-    background-color: rgb(250, 234, 4);
-
+.projects__sample1 {
+    grid-area: projects__sample1;
+    margin-bottom: 3em;
 }
 
-.projects__text2 {
-    grid-area: txt2;
-    align-items: left;
-    padding: 10px;
-    background-color: rgb(52, 255, 11); 
+.projects__sample2 {
+    grid-area: projects__sample2;
+    margin-bottom: 3em;
 }
 
-.projects__image3 {
-    grid-area: img3;
-    justify-self: left;
-    width: 670px;
-    height: 435px;
-    background-color: rgb(4, 131, 250);
-
+.projects__sample3 {
+    grid-area: projects__sample3;
+    margin-bottom: 3em;
 }
-.projects__text3 {
-    grid-area: txt3;
-    align-items: left;
-    padding: 10px;
-    background-color: rgb(178, 11, 255); 
+
+.projects__sample1,
+.projects__sample2,
+.projects__sample3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects__img-part {
+    width: 53%;
+    background-color: rgb(0, 138, 129); /*rgb(251, 251, 251); - светло-серый*/
+    /*grid-row-gap: 2em; - не работает, в sample1,2,3 тоже*/
+}
+
+.projects__text-part {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    background-color: rgb(0, 90, 143);   /*rgb(251, 251, 251); - светло-серый*/
+    justify-content: flex-start;
+    /*в div h и p на странице оборачивала*/
+    /*Вариант дает сужение серого поля за текстом сверху и снизу:
+    align-self: flex-start;
+    align-items: center;*/
+    /*justify-self: start;    align-items: start; - не бывает left*/
+    /*align-content: space-around; - нет ответа*/
+    /*align-items: center;    align-items: stretch; align-items: baseline; не получилось*/
+    /*grid-row-gap: 2em; - не работает*/
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.projects-overview__button-wrapper {
+    justify-content: flex-start;
 }
