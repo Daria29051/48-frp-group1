@@ -65,82 +65,149 @@
           <!-- Main -->
      
           <main class="projects">
-            <!-- General section -->
-            <section class="projects__general">
+            <!-- Title -->
+            <!--Удалить, если все работает <section class="projects__general"> -->
                 <h1 class="general__title">
-                    <span class="general__h1-title-1">Our</span>
-                    <span class="general__h1-title-2">Projects</span>
+                  <span class="general__h1-title-1">Our</span>
+                  <span class="general__h1-title-2">Projects</span>
                 </h1>
 
-                <section class="projects__line">
-                </section>
+            <!-- Line -->
 
-                <section class="projects__samples">
-                    <section class="projects__image1">
-                      <img 
-                        src="assets/img/page-projects/sample-project1.png" 
-                        alt="Sample 1"/>
-                      </img>
-                    </section>
-                    <section class="projects__text1">
-                        <div class="about__text-part">
-                            <h2 class="about__title h2-title">Sample Project 1</h2> <!-- /* изменить и прописать размер? */ -->
-                            <p class="about__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </p>
-                            <div class="projects-overview__button-wrapper">
-                              <form>
-                                <button class="button-color1 projects-overview__button">
-                                  ALL PROJECTS &nbsp; &rarr;
-                                </button>
-                              </form>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="projects__image2">
-                        <img 
-                        src="assets/img/page-projects/sample-project2.png" 
-                        alt="Sample 2"/>
-                        </img>
-                    </section>
-                    <section class="projects___text2">
-                        <div class="about__text-part">
-                            <h2 class="about__title h2-title">Sample Project 2</h2> <!-- /* изменить и прописать размер */ -->
-                            <p class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </p>
-                            <div class="projects-overview__button-wrapper">
-                              <form>
-                                <button class="button-color1 projects-overview__button">
-                                  ALL PROJECTS &nbsp; &rarr;
-                                </button>
-                              </form>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="rojects__image3">
-                        <img 
-                        src="assets/img/page-projects/sample-project3.png" 
-                        alt="Sample 3"/>
-                        </img>
-                    </section>
-                    <section class="projects__text3">
-                        <div class="about__text-part">
-                            <h2 class="about__title h2-title">Sample Project 3</h2> <!-- /* изменить и прописать размер */ -->
-                            <p class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </p>
-                            <div class="projects-overview__button-wrapper">
-                              <form>
-                                <button class="button-color1 projects-overview__button">
-                                  ALL PROJECTS &nbsp; &rarr;
-                                </button>
-                              </form>
-                            </div>
-                        </div>
-                    </section>
-
-                </section>
+            <section class="projects__line">
             </section>
+
+            <!-- Samples -->
+
+            <section class="projects__samples">
+
+            <!-- Sample1 -->              
+              <div class="projects__sample1"> <!-- Убрала класс  projects__samples , ибо картинка и текст выстраиваются в столбец  --> 
+                <div class="projects__img-part">
+                  <img 
+                    src="assets/img/page-projects/sample-project1.png" 
+                    alt="Sample 1"/>
+                </div> 
+                    <!--Удалить, если все работает <section class="projects__text1"> -->
+                <div class="projects__text-part">
+                  <h2 class="h2-title">Sample Project 1
+                  </h2><!-- /* изменить и прописать размер? */ -->
+                  <p class="about__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p> <!--Заменить about__text когда Даша подправит" -->
+                    <div class="projects-overview__button-wrapper">
+                      <form>
+                        <button class="button-color1 projects-overview__button">
+                        VIEW MORE &nbsp; &rarr;
+                        </button>
+                      </form>
+                    </div>
+                </div>
+              </div>
+
+              <div class="projects__samples projects__sample2">
+                <div class="projects__img-part">
+                  <img 
+                    src="assets/img/page-projects/sample-project2.png" 
+                    alt="Sample 2"/>
+                </div> 
+                    <!--Удалить, если все работает <section class="projects__text2"> -->
+                <div class="projects__text-part">
+                  <h2 class="h2-title">Sample Project 2
+                  </h2> <!-- /* изменить и прописать размер? */ -->
+                    <p class="about__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p> <!--Заменить about__text когда Даша подправит" -->
+                    <div class="projects-overview__button-wrapper">
+                      <form>
+                        <button class="button-color1 projects-overview__button">
+                        VIEW MORE &nbsp; &rarr;
+                        </button>
+                      </form>
+                    </div>
+                </div>
+              </div>
+                        <!-- /* изменить второй класс прописать расположение у себя */ -->
+
+            <!-- Sample 3 -->
+            <div class="projects__samples projects__sample3">
+              <div class="projects__img-part">
+                <img 
+                  src="assets/img/page-projects/sample-project3.png" 
+                  alt="Sample 3"/>
+              </div> 
+                  <!--Удалить, если все работает <section class="projects__text3"> -->
+              <div class="projects__text-part">
+                <h2 class="h2-title">Sample Project 3
+                </h2> <!-- /* изменить и прописать размер? */ -->
+                  <p class="about__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  </p> <!--Заменить about__text когда Даша подправит" -->
+                  <div class="projects-overview__button-wrapper">
+                    <form>
+                      <button class="button-color1 projects-overview__button">
+                      VIEW MORE &nbsp; &rarr;
+                      </button>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+            <!-- Slider -->
+          <!-- <section class="slider">
+              <form class="main__button">
+                <div class="div__1__p__all">
+                  <p class="p__all">0</p>
+                  <p class="p__all">1</p>
+                </div>
+                <div class="div__2__main__gallery__pages__2">
+                  <p class="main__gallery__pages__2">/ &nbsp;</p>
+                </div>
+                <div class="div__3__main__gallery__pages__2">
+                  <p class="main__gallery__pages__2">&nbsp;05</p>
+                </div>
+                <div class="main__gallery__button__1">
+                  <a class="gallery__button__1" href="index.html">
+                    &nbsp; &larr;
+                  </a>
+                </div>
+                <div class="main__gallery__button__2">
+                  <a class="gallery__button__2" href="#"> &nbsp; &rarr; </a>
+                </div>
+              </form>
+            </section>-->
+
+            <section="slider">
+              <form class="slider">
+                <div class="slider__page-total">
+                  <div class="silder__page">
+                    <p class="slider__page-number">
+                      0
+                    </p>
+                    <p class="slider__page-number">
+                      1
+                    </p>
+                  </div>
+                  <div class="slider__divide">
+                    <p class="slider__divide-symbol">/ &nbsp;</p>
+                  </div>
+                  <div class="slider__all-pages">
+                    <p class="slider__all-pages-number">&nbsp;05</p>
+                  </div>
+                </div>
+                <div class="slider__button">
+                  <div class="slider__button-back">
+                    <a class="slider__button-back-link" href="#">
+                      &nbsp; &larr;
+                    </a>
+                  </div>
+                  <div class="slider__button-forward">
+                    <a class="slider__button-forward-link" href="gallery.html">
+                      &nbsp; &rarr;
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </section=>
+
         </main>
 
 
