@@ -44,6 +44,8 @@ html, body {
 }
 
 .projects__samples {
+    width: 80vw;
+    justify-content: center;
     grid-area: projects__samples;
     display: grid;
     grid-template-columns: 1fr;
@@ -90,17 +92,25 @@ html, body {
 }
 
 .projects__img-part {
-    width: 53%;
+    width: 57%;
     background-color: rgb(0, 138, 129); /*rgb(251, 251, 251); - светло-серый*/
     /*grid-row-gap: 2em; - не работает, в sample1,2,3 тоже*/
+}
+
+.projects__img {
+overflow: hidden;
+width: 100%;
+height: 100%;
 }
 
 .projects__text-part {
     display: flex;
     flex-direction: column;
-    width: 47%;
+    width: 43%;
     background-color: rgb(0, 90, 143);   /*rgb(251, 251, 251); - светло-серый*/
-    justify-content: flex-start;
+    justify-content: center;
+    row-gap: 1.5em;
+    padding-left: 2em;
     /*в div h и p на странице оборачивала*/
     /*Вариант дает сужение серого поля за текстом сверху и снизу:
     align-self: flex-start;
@@ -109,6 +119,10 @@ html, body {
     /*align-content: space-around; - нет ответа*/
     /*align-items: center;    align-items: stretch; align-items: baseline; не получилось*/
     /*grid-row-gap: 2em; - не работает*/
+}
+
+.projects__h2-title {
+    padding-top: 0.5em;
 }
 
 .img {
