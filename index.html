@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Digital Project Bureau | Архитектурное Бюро</title>
+    <link
+      rel="shortcut icon"
+      href="assets//img/logo/favicon.png"
+      type="image/png"
+    />
     <link rel="stylesheet" href="assets/styles/normalize.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
   </head>
@@ -67,10 +72,43 @@
         <!-- General section -->
 
         <section class="general">
-          <h1 class="general__title">
-            <span class="general__h1-title-1 h1-title-1">PROJECT</span>
-            <span class="general__h1-title-2 h1-title-2">LORUM</span>
-          </h1>
+          <div class="generel__title-block">
+            <h1 class="general__title">
+              <span class="general__h1-title-1 h1-title-1">PROJECT</span>
+              <span class="general__h1-title-2 h1-title-2">LORUM</span>
+            </h1>
+
+            <form class="slider slider-main-page">
+              <div class="slider__page-total">
+                <div class="silder__page">
+                  <p class="slider__page-number slider__page-number-main-page">
+                    0
+                  </p>
+                  <p class="slider__page-number slider__page-number-main-page">
+                    1
+                  </p>
+                </div>
+                <div class="slider__divide">
+                  <p class="slider__divide-symbol">/ &nbsp;</p>
+                </div>
+                <div class="slider__all-pages slider__all-pages-main-page">
+                  <p class="slider__all-pages-number">&nbsp;02</p>
+                </div>
+              </div>
+              <div class="slider__button">
+                <div class="slider__button-back">
+                  <a class="slider__button-back-link" href="#">
+                    &nbsp; &larr;
+                  </a>
+                </div>
+                <div class="slider__button-forward">
+                  <a class="slider__button-forward-link" href="gallery.html">
+                    &nbsp; &rarr;
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
 
           <div class="general__img-block">
             <img
@@ -157,45 +195,116 @@
           </div>
         </section>
 
+        <!-- Projects-overview section -->
+
         <section class="projects-overview">
           <h2 class="projects-overview__title h2-title">Our Projects</h2>
 
           <div class="projects-overview__gallery">
-            <img
-              class="projects-overview__img-1"
-              src="assets/img/page-main/projects/project-1.png"
-              alt="project-1"
-            />
+            <div class="projects-overview__cover-1">
+              <img
+                class="projects-overview__img-1"
+                src="assets/img/page-main/projects/project-1.png"
+                alt="project-1"
+              />
+              <div class="overlay">
+                <h3 class="overlay__title">
+                  Sample <br />
+                  Project
+                </h3>
+                <form>
+                  <button class="button-color1 overlay__button-color1">
+                    VIEW MORE &nbsp; &rarr;
+                  </button>
+                </form>
+              </div>
+            </div>
 
-            <img
-              class="projects-overview__img-2"
-              src="assets/img/page-main/projects/project-2.png"
-              alt="project-2"
-            />
+            <div class="projects-overview__cover-2">
+              <img
+                class="projects-overview__img-2"
+                src="assets/img/page-main/projects/project-2.png"
+                alt="project-2"
+              />
+            </div>
 
-            <img
-              class="projects-overview__img-3"
-              src="assets/img/page-main/projects/project-3.png"
-              alt="project-3"
-            />
+            <div class="projects-overview__cover-3">
+              <img
+                class="projects-overview__img-3"
+                src="assets/img/page-main/projects/project-3.png"
+                alt="project-3"
+              />
+            </div>
 
-            <img
-              class="projects-overview__img-4"
-              src="assets/img/page-main/projects/project-4.png"
-              alt="project-4"
-            />
+            <div class="projects-overview__cover-4">
+              <img
+                class="projects-overview__img-4"
+                src="assets/img/page-main/projects/project-4.png"
+                alt="project-4"
+              />
+            </div>
 
-            <img
-              class="projects-overview__img-5"
-              src="assets/img/page-main/projects/project-5.png"
-              alt="project-5"
-            />
+            <div class="projects-overview__cover-5">
+              <img
+                class="projects-overview__img-5"
+                src="assets/img/page-main/projects/project-5.png"
+                alt="project-5"
+              />
+            </div>
           </div>
 
           <div class="projects-overview__button-wrapper">
             <form>
               <button class="button-color2 projects-overview__button">
                 ALL PROJECTS &nbsp; &rarr;
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Contact Form -->
+
+        <section class="contact-form">
+          <h2 class="contact-form__title h2-title">Contact Us</h2>
+          <div class="contact-form__wrapper">
+            <div class="contact-form__form-part">
+              <input
+                class="input__field input__name"
+                type="text"
+                placeholder="Name"
+              />
+              <input
+                class="input__field input__tel"
+                type="tel"
+                placeholder="Phone Number*"
+              />
+              <input
+                class="input__field input__email"
+                type="email"
+                placeholder="E-mail*"
+              />
+              <input
+                class="input__field input__interests"
+                type="text"
+                placeholder="Interested In"
+              />
+              <textarea
+                class="input__field input__message"
+                placeholder="Message*"
+              ></textarea>
+            </div>
+            <div class="contact-form__img-part">
+              <img
+                class="contact-form__img"
+                src="assets/img/page-main/contact/contact.png"
+                alt="contact-form image"
+              />
+            </div>
+          </div>
+          <div class="contact-form__button-wrapper">
+            <form>
+              <button class="button-color2 contact-form__button">
+                SEND EMAIL &nbsp; &rarr;
               </button>
             </form>
           </div>
