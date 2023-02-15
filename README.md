@@ -1,10 +1,13 @@
 # Architecture company site
-![logo for readme](https://user-images.githubusercontent.com/119353066/218862958-a48cbe9a-65f5-4807-ab2f-3cbef914eaa8.png)
- 
+
+![logo for readme](https://user-images.githubusercontent.com/119349154/219102989-79108d83-cbe0-46a1-a537-7eac0a83b900.png)
+
 ## Функционал сайта
- + Посещение платформы в качестве гостя.
+
+- Посещение платформы в качестве гостя.
 
 ## Использованные технологии:
+
 <div> 
 <img alt="Github" src="https://img.shields.io/badge/-Github-black?style=for-the-badge&logo=github&logoColor=white" />
 <img alt="CSS" src="https://img.shields.io/badge/-CSS-F05032?style=for-the-badge&logo=CSS&logoColor=white" />
@@ -12,8 +15,9 @@
 </div>
 
 ## Наша команда:
+
 <h3>
-  <a href="[https://github.com/Daria29051)">
+  <a href="https://github.com/Daria29051">
     <img alt="Daria" src="https://img.shields.io/badge/-Daria-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
