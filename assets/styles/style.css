@@ -1035,6 +1035,72 @@ html, body {
 }
 
 
+/* Contact Form */
+
+.contact-form__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.5em;
+}
+
+.contact-form__form-part {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+    grid-template-areas:
+    "input__name"
+    "input__tel"
+    "input__email"
+    "input__interests"
+    "input__message"
+    "input__message"
+    "input__message";
+    row-gap: 0.62em;   
+}
+
+.input__field {
+    border: none;
+    background-color: #F3F3F3;
+    color:#8D8D8D;
+    font-size: 0.8em;
+    letter-spacing: 0.04em;
+    padding-left: 1.25em; 
+}
+
+.input__name {
+    grid-area: input__name;
+}
+
+.input__tel {
+    grid-area: input__tel;
+}
+
+.input__email {
+    grid-area: input__email;
+}
+
+.input__interests {
+    grid-area: input__interests;
+}
+
+.input__message {
+grid-area: input__message;
+height: 8em;
+}
+
+.contact-form__img-part {
+    display: none;
+}
+
+
+.contact-form__button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Footer */
 
 
@@ -1403,7 +1469,80 @@ html, body {
 .projects-overview__button {
     font-size: 0.5em;
 }
-    
+  
+
+/* Contact Form */
+
+.contact-form {
+    margin-bottom: 2em ;
+}
+
+.contact-form__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.contact-form__form-part {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+    grid-template-areas:
+    "input__name"
+    "input__tel"
+    "input__email"
+    "input__interests"
+    "input__message"
+    "input__message"
+    "input__message";
+    row-gap: 0.62em;   
+}
+
+.input__field {
+    border: none;
+    background-color: #F3F3F3;
+    color:#8D8D8D;
+    font-size: 0.5em;
+    letter-spacing: 0.04em;
+    padding-left: 1.25em; 
+}
+
+.input__name {
+    grid-area: input__name;
+}
+
+.input__tel {
+    grid-area: input__tel;
+}
+
+.input__email {
+    grid-area: input__email;
+}
+
+.input__interests {
+    grid-area: input__interests;
+}
+
+.input__message {
+grid-area: input__message;
+height: 8em;
+}
+
+.contact-form__img-part {
+    display: none;
+}
+
+
+.contact-form__button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form__button {
+    font-size: 0.5em;
+}
     
 /* Footer */
     
