@@ -1,6 +1,6 @@
 # Architecture company site
 
-![logo for readme](https://user-images.githubusercontent.com/119349154/219102989-79108d83-cbe0-46a1-a537-7eac0a83b900.png)
+![logo for readme](https://user-images.githubusercontent.com/119349154/219104264-538e0a34-490c-4817-8eac-28e2cc1e8ea4.png)
 
 ## Функционал сайта
 
