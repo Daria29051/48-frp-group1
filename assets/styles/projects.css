@@ -17,15 +17,16 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: 10% 2% auto 10%;
     grid-template-areas:
-    "general__title"
+    "all-pages__title"
     "projects__line"
     "projects__samples"
     "slider";
     justify-self: center;
 }    
 
-.general_title {
-    grid-area: general_title;
+
+.all-pages__title {
+    grid-area: all-pages__title;
 }
 
 .projects__line {
@@ -63,12 +64,6 @@ html, body {
     margin-bottom: 7em;
 }
 
-/*.slider__divide-symbol {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start; - не работает;
-    align-items: flex-start;
-}*/
 
 .projects__sample1,
 .projects__sample2,
@@ -161,7 +156,7 @@ flex-basis: auto;
         grid-template-columns: 1fr;
         grid-template-rows: 10% 2% auto 10%;
         grid-template-areas:
-        "general__title"
+        "all-pages__title"
         "projects__line"
         "projects__samples"
         "slider";
@@ -182,7 +177,7 @@ flex-basis: auto;
         grid-template-columns: 1fr;
         grid-template-rows: 10% 2% auto 10%;
         grid-template-areas:
-        "general__title"
+        "all-pages__title"
         "projects__line"
         "projects__samples"
         "slider"; 
@@ -204,7 +199,7 @@ flex-basis: auto;
         grid-template-columns: 1fr;
         grid-template-rows: 10% 2% auto 10%;
         grid-template-areas:
-        "general__title"
+        "all-pages__title"
         "projects__line"
         "projects__samples"
         "slider";

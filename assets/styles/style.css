@@ -122,13 +122,13 @@ margin-top: 0.5em;
     grid-template-columns: 1fr;
     grid-template-rows: 70% 30%;
     grid-template-areas: 
-    "general__title"
+    "main-page__title"
     "slider-main-page";
     row-gap: 3.2em;  
 }
 
-.general__title {
-    grid-area: general__title ; 
+.main-page__title {
+    grid-area: main-page__title ; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,22 +136,28 @@ margin-top: 0.5em;
     margin-right: 10px;
 }
 
-.h1-title-1 {
+.all-pages__title {
+    grid-area: all-pages__title; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px; 
+}
+
+.h1__title-1 {
     color: #BDBDBD;
     font-weight: 300;
     font-size: 2em;
-    text-transform: uppercase;
 }
-
-.h1-title-2 {
+    
+.h1__title-2 {
     color:  #333333;
     font-weight: 700;
     font-size: 2em;
-    text-transform: uppercase;
 }
-
 .general__img-block {
     grid-area: general__img-block;
+    position: relative;
 }
 
 .general__img {
@@ -283,7 +289,7 @@ margin-top: 0.5em;
 
 .general__button-color1 {
     position: absolute;
-    left: 0;
+    left: -0.1em;
     bottom: 0;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -299,7 +305,7 @@ margin-top: 0.5em;
     grid-template-columns:repeat(2, 1fr);
     grid-template-areas: 
     "about__img"
-    "about__text";
+    "text-1";
     margin-bottom: 5em;
     column-gap: 3.2em;
 }
@@ -343,7 +349,7 @@ margin-top: 0.5em;
     width: 100%;
 }
 
-.about__text {
+.text-1 {
     width: 80%;
     color: #000000;
     font-weight: 300;
@@ -393,7 +399,7 @@ margin-top: 0.5em;
     align-items: center;
 }
 
-.mission__text {
+.text-2 {
     color: #333333;
     font-style: normal;
     font-weight: 400;
@@ -775,7 +781,7 @@ html, body {
 }
 
 
-.general__title {
+.main-page__title {
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -783,19 +789,19 @@ html, body {
     margin-bottom: 0.5em;   
 }
 
-.h1-title-1 {
+.h1__title-1{
     color: #BDBDBD;
     font-weight: 300;
     font-size: 1em;
     padding-right: 0.5em;
-    text-transform: uppercase; 
+    
 }
 
-.h1-title-2 {
+.h1__title-2 {
     color:  #333333;
     font-weight: 700;
     font-size: 1em;
-    text-transform: uppercase; 
+    
 }
 
 .general__img-block {
@@ -821,7 +827,7 @@ html, body {
 
 .general__button-color1 {
     position: absolute;
-    left: 0;
+    left: -0.1em;
     bottom: 0;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -846,7 +852,7 @@ html, body {
     align-items: center;  
 }
 
-.about__text {
+.text-1 {
     color: #000000;
     font-weight: 300;
     font-size: 1em;
@@ -896,7 +902,7 @@ html, body {
     font-size: 6em;
 }
 
-.mission__text {
+.text-2 {
     width: fit-content;
     font-size: 1em; 
     word-wrap: break-word;
@@ -1206,7 +1212,7 @@ html, body {
     flex-direction: column;
 }
 
-.general__title {
+.main-page__title {
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -1214,19 +1220,18 @@ html, body {
     margin-bottom: 0.5em;  
 }
 
-.h1-title-1 {
+.h1__title-1 {
     color: #BDBDBD;
     font-weight: 300;
     font-size: 0.5em;
     padding-right: 0.5em;
-    text-transform: uppercase;
+    
 }
 
-.h1-title-2 {
+.h1__title-2 {
     color:  #333333;
     font-weight: 700;
     font-size: 0.5em;
-    text-transform: uppercase; 
 }
 
 .general__img-block {
@@ -1251,7 +1256,7 @@ html, body {
     
 .general__button-color1 {
     position: absolute;
-    left: 0;
+    left: -0.1em;
     bottom: 0;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1280,7 +1285,7 @@ html, body {
     align-items: center;   
 }
 
-.about__text {
+.text-1 {
     color: #000000;
     font-weight: 300;
     font-size: 1em;
@@ -1336,7 +1341,7 @@ html, body {
     font-size: 4em;
 }
 
-.mission__text {
+.text-2 {
     width: fit-content;
     font-size: 0.7em; 
     word-wrap: break-word;
