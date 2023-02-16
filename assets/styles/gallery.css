@@ -34,18 +34,6 @@ html, body {
     align-items: end;
 }
 
-.general__h1-title-1 {
-    color: #BDBDBD;
-    font-weight: 300;
-    font-size: 2em;
-}
-    
-.general__h1-title-2 {
-    color:  #333333;
-    font-weight: 700;
-    font-size: 2em;
-}
-
 .main__hr__link {
     display: grid;
     grid-area: header_gallery_hr;
@@ -158,19 +146,7 @@ html, body {
         margin: 0;
         justify-self: center;
     }
-
-    .main__general__title {
-        display: flex;
-        justify-self: center;
-        flex-direction: column;
-        margin: 0;
-    
-    }
         
-    .general__h1-title-1, .general__h1-title-2 {
-        font-size: 1.5em;
-    }
-
     .main__hr__link {
         margin-right: 4vh;
         margin-left: 4vh;
@@ -226,10 +202,6 @@ html, body {
         align-items: end;
     }
         
-    .general__h1-title-1, .general__h1-title-2 {
-       font-size: 2em;
-    }
-
     .main__hr__link {
         width: 60%;
         margin-left: 20vh;
@@ -284,10 +256,6 @@ html, body {
         align-items: end;
     }
         
-    .general__h1-title-1, .general__h1-title-2 {
-       font-size: 2em;
-    }
-
     .main__hr__link {
         width: 75%;
         margin-left: 20vh;
