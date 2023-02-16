@@ -734,18 +734,26 @@ html, body {
 /* Main */
 
 /* Slider */
-.slider__main-page {
+
+.general__title-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em; 
+}
+.slider-main-page {
     display: flex;
     flex-direction: column;  
 }
 
-.slider__page-total {
+.slider__text-part {
     display: none;
 }
 
-.slider__button {
+.slider__button-part {
     display: flex;
     justify-content: center;
+    margin-bottom: 1em;
+
 }
 
 
@@ -1160,20 +1168,26 @@ html, body {
 
 /* Slider */
 
-
-.slider__main-page {
+.general__title-block {
     display: flex;
     flex-direction: column;
+    row-gap: 1em; 
+}
+.slider-main-page {
+    display: flex;
+    flex-direction: column;  
 }
 
-.slider__page-total {
+.slider__text-part {
     display: none;
 }
 
-.slider__button {
+.slider__button-part {
     display: flex;
     justify-content: center;
+    margin-bottom: 1em;
 }
+
 
 
 /* General section */
