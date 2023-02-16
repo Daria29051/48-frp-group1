@@ -60,9 +60,9 @@ html, body {
     grid-area: main_gallery;
     margin-left: 20vh;
     margin-right: 30vh;
+    margin-bottom: 7vh;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    grid-template-rows: repeat(2, minmax(260px, 270px));
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
 .main__card__item {
@@ -145,69 +145,71 @@ html, body {
 /* Change main screen # 1 */
 
 
-@media screen and (min-width:249px) and (max-width:755px) {
+@media screen and (min-width:249px) and (max-width:500px) {
    
     .main__gallery {
-        display: grid;
-        min-height: 420vh;
+        height: auto;
         grid-template-columns: 1fr;
-        grid-template-rows: 5% 1.5% auto 25vh;
-        grid-template-areas: "header_gallery"
-                             "header_gallery_hr"
-                             "main_gallery"
-                             "footer_gallery"
+        grid-template-rows: 25vh 7vh auto 25vh;
     }
 
     .main__gallery__general {
-        display: grid;
-        grid-area: header_gallery;
-        width: 15%; 
-        margin-left: 9vh;
-        align-items: end;
+        display: flex;
+        margin: 0;
+        justify-self: center;
+    }
+
+    .main__general__title {
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        margin: 0;
+    
     }
         
     .general__h1-title-1, .general__h1-title-2 {
-       font-size: 1.5em;
+        font-size: 1.5em;
     }
 
     .main__hr__link {
-        width: 50%;
-        margin-left: 9vh;
+        margin-right: 4vh;
+        margin-left: 4vh;
+        width: 100%;
     }
     
     .main__gallery__card {
-        display: grid;
-        margin-left: 9vh;
-        grid-gap: 5px;
+        justify-self: center;
+        margin: 0;
+        grid-gap: 10px;
     }
     
     .div__1__p__all, .div__2__main__gallery__pages__2, .div__3__main__gallery__pages__2  {
         display: none;        
     }
 
-    .main__gallery__button__1 {
-        margin-left: 4vh;
-    }
-    
     .main__gallery__button__2 {
         margin-left: 3vh;
     }
 
     .main__gallery__button__1, .main__gallery__button__2 {
-        display: grid;
-        margin-top: 4vh;
-        align-content: center;
+       align-content: center;
+       margin-top: 5vh;
+    }
+
+    .main__buttom {
+        display: flex;
+        justify-content: center;
     }
 }
 
 /* Change main screen # 2 */
 
 
-@media screen and (min-width:756px) and (max-width:1000px) {
+@media screen and (min-width:500px) and (max-width:1023px) {
    
     .main__gallery {
         display: grid;
-        min-height: 290vh;
+        height: auto;
         grid-template-columns: 1fr;
         grid-template-rows: 30vh 8vh auto 25vh;
         grid-template-areas: "header_gallery"
@@ -236,30 +238,36 @@ html, body {
     .main__gallery__card {
         display: grid;
         margin-left: 20vh;
-        grid-gap: 10px;
-    }
+        margin-right: 30vh;
+           }
     
     .div__1__p__all, .div__2__main__gallery__pages__2, .div__3__main__gallery__pages__2  {
         display: none;        
     }
 
-    .main__gallery__button__1 {
-        margin-left: 30vh;
-    }
-    
     .main__gallery__button__2 {
         margin-left: 3vh;
+    }
+
+    .main__gallery__button__1, .main__gallery__button__2 {
+       align-content: center;
+       margin-top: 5vh;
+    }
+
+    .main__buttom {
+        display: flex;
+        justify-content: center;
     }
 }
 
 /* Change main screen # 3 */
 
 
-@media screen and (min-width:1001px) and (max-width:1490px) {
+@media screen and (min-width:1023px) and (max-width:5000px) {
    
     .main__gallery {
         display: grid;
-        min-height: 190vh;
+        height: auto;
         grid-template-columns: 1fr;
         grid-template-rows: 30vh 8vh auto 20vh;
         grid-template-areas: "header_gallery"
@@ -283,6 +291,7 @@ html, body {
     .main__hr__link {
         width: 75%;
         margin-left: 20vh;
+        margin-right: 20vh;
     }
     
     .div__1__p__all {
