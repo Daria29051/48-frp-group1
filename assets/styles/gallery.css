@@ -26,12 +26,10 @@ html, body {
                          "footer_gallery"
 }
 
-.main__gallery__general {
+.all-pages__title {
     display: grid;
     grid-area: header_gallery;
-    width: 20%; 
     margin-left: 20vh;
-    align-items: end;
 }
 
 .main__hr__link {
@@ -56,183 +54,94 @@ html, body {
 .main__card__item {
     width: 210px;
     height: 260px;
+    cursor: pointer;
 }
 
-.p__all {
-    margin: 0;
-    padding: 0;
-}
-
-.main__buttom {
+.slider {
     grid-area: footer_gallery;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: 100%;
 }
 
-.div__1__p__all {
-    grid-column: 3/5;
-    grid-row: 1/2;
-    margin-top: 2vh;
-    margin-left: -1vh;
-    font-size: 1.4em;
-    font-weight: 400;
+.slider__text-part {
+    grid-column: 3/4;
+    margin-top: -6vh;
 }
 
-.div__2__main__gallery__pages__2, .div__3__main__gallery__pages__2  {
-    grid-column: 3/5;
-    grid-row: 1/2;
-    color: #BDBDBD;
-    
+.slider__button-part {
+    grid-column: 4/6;
+    margin-top: -10vh;
 }
-
-.div__2__main__gallery__pages__2 {
-    font-size: 3em;
-    margin-left: 5vh;
-    margin-top: 5vh;
-    transform: rotate(35deg);
-    font-weight: 50;
-}
-
-.div__3__main__gallery__pages__2 {
-    font-size: 1.5em;
-    margin-left: 13vh;
-    margin-top: 2.5vh;
-    font-weight: 300;
-}
-
-.main__gallery__button__1, .main__gallery__button__2 {
-    display: grid;
-    grid-row: 1/2;
-    height: 3.5em;
-    width: 3.5em;
-    align-content: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.main__gallery__button__1 {
-    grid-column: 5/6;
-    border: solid 1px rgb(223, 223, 223);
-    background-color: white;
-}
-
-.main__gallery__button__2 {
-    grid-column: 6/7;
-    border: none;
-    background-color: rgb(231, 231, 231, 0.3);
-}
-
-.gallery__button__1, .gallery__button__2 {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
 
 /* Change main screen # 1 */
 
-
-@media screen and (min-width:249px) and (max-width:500px) {
-   
+@media screen and (min-width:249px) and (max-width:853px) {
     .main__gallery {
+        display: grid;
         height: auto;
         grid-template-columns: 1fr;
-        grid-template-rows: 25vh 7vh auto 25vh;
-    }
-
-    .main__gallery__general {
-        display: flex;
+        grid-template-rows: 15vh 7vh auto 20vh;
         margin: 0;
-        justify-self: center;
-    }
-        
-    .main__hr__link {
-        margin-right: 4vh;
-        margin-left: 4vh;
-        width: 100%;
-    }
-    
-    .main__gallery__card {
-        justify-self: center;
-        margin: 0;
-        grid-gap: 10px;
-    }
-    
-    .div__1__p__all, .div__2__main__gallery__pages__2, .div__3__main__gallery__pages__2  {
-        display: none;        
-    }
-
-    .main__gallery__button__2 {
-        margin-left: 3vh;
-    }
-
-    .main__gallery__button__1, .main__gallery__button__2 {
-       align-content: center;
-       margin-top: 5vh;
-    }
-
-    .main__buttom {
-        display: flex;
         justify-content: center;
     }
+
+    .all-pages__title {
+        display: flex;
+        justify-self: center;
+        margin-left: 0;
+    }
+
+    .main__hr__link {
+        display: flex;
+        justify-self: center;
+        margin-left: 0;
+        width: 40%;
+    }
+
+    .main__gallery__item {
+        margin: 0;
+        justify-items: center;
+    }
+
+    .slider__page-number, .slider__all-pages-number, .slider__divide  {
+        display: none;        
+        }
+
+    .slider {
+        display: flex;
+        justify-self: center;
+        margin-left: 0;    
+        }
+
 }
 
 /* Change main screen # 2 */
 
 
-@media screen and (min-width:500px) and (max-width:1023px) {
+@media screen and (min-width:853px) and (max-width:1023px) {
    
     .main__gallery {
         display: grid;
         height: auto;
         grid-template-columns: 1fr;
-        grid-template-rows: 30vh 8vh auto 25vh;
-        grid-template-areas: "header_gallery"
-                             "header_gallery_hr"
-                             "main_gallery"
-                             "footer_gallery"
-    }
-
-    .main__gallery__general {
-        display: grid;
-        grid-area: header_gallery;
-        width: 20%; 
-        margin-left: 20vh;
-        align-items: end;
-    }
+        grid-template-rows: 20vh 8vh auto 25vh;
         
-    .main__hr__link {
-        width: 60%;
-        margin-left: 20vh;
     }
-    
-    .main__gallery__card {
-        display: grid;
-        margin-left: 20vh;
-        margin-right: 30vh;
-           }
-    
-    .div__1__p__all, .div__2__main__gallery__pages__2, .div__3__main__gallery__pages__2  {
+
+    .slider__page-number, .slider__all-pages-number, .slider__divide  {
         display: none;        
+        }
+
+    .slider {
+       display: flex;  
+       justify-self: center;
+       margin-left: 0;    
+       }
+       
     }
 
-    .main__gallery__button__2 {
-        margin-left: 3vh;
-    }
-
-    .main__gallery__button__1, .main__gallery__button__2 {
-       align-content: center;
-       margin-top: 5vh;
-    }
-
-    .main__buttom {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/* Change main screen # 3 */
+    /* Change main screen # 3 */
 
 
 @media screen and (min-width:1023px) and (max-width:5000px) {
@@ -241,58 +150,16 @@ html, body {
         display: grid;
         height: auto;
         grid-template-columns: 1fr;
-        grid-template-rows: 30vh 8vh auto 20vh;
-        grid-template-areas: "header_gallery"
-                             "header_gallery_hr"
-                             "main_gallery"
-                             "footer_gallery"
+        grid-template-rows: 25vh 8vh auto 20vh;
     }
 
-    .main__gallery__general {
-        display: grid;
-        grid-area: header_gallery;
-        width: 20%; 
-        margin-left: 20vh;
-        align-items: end;
-    }
-        
-    .main__hr__link {
-        width: 75%;
-        margin-left: 20vh;
-        margin-right: 20vh;
+    .slider__text-part {
+        grid-column: 5/6;
+       
     }
     
-    .div__1__p__all {
-        grid-column: 3/4;
-        grid-row: 1/2;
-        margin-top: 2.7vh;
-        margin-left: 4vh;
+    .slider__button-part {
+        grid-column: 6/9;
     }
-    
-    .div__2__main__gallery__pages__2, .div__3__main__gallery__pages__2  {
-        grid-column: 4/6;
-        grid-row: 1/2;
     }
-    
-    .div__2__main__gallery__pages__2 {
-        margin-left: 5vh;
-        margin-top: 3vh;
-    }
-    
-    .div__3__main__gallery__pages__2 {
-        font-size: 1.5em;
-        margin-left: 13vh;
-        margin-top: 2.5vh;
-    }
-    
-    .main__gallery__button__1 {
-        grid-column: 7/8;
-        grid-row: 1/2;
-    }
-    
-    .main__gallery__button__2 {
-        grid-column: 8/9;
-        grid-row: 1/2;
-        margin-left: 3vh;
-    }
-}
+
