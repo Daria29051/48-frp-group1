@@ -14,8 +14,10 @@ html, body {
 .projects {
     display: grid;
     width: 80vw;
+/*    min-width: 300px; - Для ликвидации переполнения*/
+    height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 2% auto 10%;
+    grid-template-rows: 10% 2% auto 10%; /*не может ли 'переполнять'? визуально хэдеру хватит и 5% */
     grid-template-areas:
     "all-pages__title"
     "projects__line"
@@ -23,7 +25,6 @@ html, body {
     "slider";
     justify-self: center;
 }    
-
 
 .all-pages__title {
     grid-area: all-pages__title;
@@ -49,6 +50,8 @@ html, body {
     "projects__sample1"
     "projects__sample2"
     "projects__sample3";
+    word-break: break-word; /*ничего не поменялось - нашла в styles - удалить после успешной адаптации*/
+    hyphens: manual; /*не работает*/
 }
 
 .slider {
@@ -60,29 +63,37 @@ html, body {
     align-content: flex-end;
     /*justify-self: flex-start; flex-end;
     justify-content: flex-start; - не работает*/
-    background-color: aquamarine;
-    margin-bottom: 7em;
+    background-color: aquamarine; /*не работает*/
+    margin-bottom: 6em;
 }
-
 
 .projects__sample1,
 .projects__sample2,
 .projects__sample3 {
     display: flex;
     flex-direction: row;
-    margin-bottom: 3em;
     flex-wrap: wrap;
+    margin-bottom: 3em;
     min-width: 500;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
-justify-content: flex-end;
- /* 6 строк - не работают*/
+    justify-content: flex-end;
 
+ /* 6 строк - не работают
+     max-width: 600px;
+     */
+ /*min-width: 100-450-1000px; - без реакции*/
 }
-
+/*- не помогает перенети блок с текстом*/
+    word-break: break-word; /*ничего не поменялось - нашла в styles - удалить после успешной адаптации*/
+    hyphens: manual;/*не работает*/
+    
 .projects__sample1 {
     grid-area: projects__sample1;
+    display: flex; /*не работает*/
+    flex-direction: row; /*не работает*/
+    flex-wrap: wrap; /*не работает*/
 }
 
 .projects__sample2 {
@@ -96,12 +107,14 @@ justify-content: flex-end;
 .projects__img-part {
     width: 57%;
     background-color: rgb(251, 251, 251);
+/*min-width: 450px; - и др. размеры - не помогают*/
 }
 
 .projects__img {
 overflow: hidden;
 width: 100%;
 max-width: 100%;
+/*min-width: 450px; - и др. размеры - не помогают*/
 height: auto;
 }
 
@@ -119,10 +132,21 @@ height: auto;
     padding-top: 0,5em;
 }
 
-.projects-overview__button-wrapper {
-    justify-content: flex-start;
+.projects-overview__button-wrapper__viewmore { /*этот класс - есть в Styles.css justify-con.center. Заменила - и все равно при изменении размера уезжает*/
+    display: flex;/*было скрыто*/
+    justify-content: flex-start; /*flex-end - в середине экрана*/
+    /*flex-wrap: nowrap; - на айфоне уплывает*/
+    width: 10%;
+    max-width: 100%;
+    height: auto;
     padding-top: 5em;
 }
+
+.projects__slider-wrapper {
+    margin-bottom: 12vh;
+    padding-bottom: 6vh;
+}
+
 
 /*.projects__box {
 flex-grow: 0;
@@ -163,10 +187,168 @@ flex-basis: auto;
         justify-self: center;
     }  
     
-    .footer {
+    .footer {   /* Не удалять! */
         display: none;    
     }
+
+    .all-pages__title {   /* Не удалять! */
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    }
+
+    .projects {
+        display: grid;
+        width: 80vw;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 2% auto 10%;
+        grid-template-areas:
+        "all-pages__title"
+        "projects__line"
+        "projects__samples"
+        "slider";
+        justify-self: center;
+    }    
+    
+    .all-pages__title {
+        grid-area: all-pages__title;
+    }
+    
+    /* Далее не адаптировано - просто скопировано */
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    html {
+        height: 100%;
+    }
+    
+    html, body {
+        overflow-x: hidden;  
+    }
+
+    .projects__line {
+        grid-area: projects__line;
+        display: grid;
+        width: 80vw;
+        height: 1px;
+        justify-self: stretch; 
+        background-color:rgb(242, 242, 242);
+    }
+    
+    .projects__samples {
+        width: 80vw;
+        justify-content: center;
+        grid-area: projects__samples;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "projects__sample1"
+        "projects__sample2"
+        "projects__sample3";
+        word-break: break-word;
+        hyphens: manual;
+    }
+    
+    .slider {
+        grid-area: slider;
+        display: flex;
+        flex-direction: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-content: flex-end;
+        background-color: aquamarine; 
+        margin-bottom: 6em;
+    }
+    
+    .projects__sample1,
+    .projects__sample2,
+    .projects__sample3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 3em;
+        min-width: 500;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        justify-content: flex-end;
+    }
+  
+    .projects__sample1 {
+        grid-area: projects__sample1;
+        display: flex; /*не работает*/
+        flex-direction: row; /*не работает*/
+        flex-wrap: wrap; /*не работает*/
+    }
+    
+    .projects__sample2 {
+        grid-area: projects__sample2;
+    }
+    
+    .projects__sample3 {
+        grid-area: projects__sample3;
+    }
+    
+    .projects__img-part {
+        width: 57%;
+        background-color: rgb(251, 251, 251);
+    /*min-width: 450px; - и др. размеры - не помогают*/
+    }
+    
+    .projects__img {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    /*min-width: 450px; - и др. размеры - не помогают*/
+    height: auto;
+    }
+    
+    .projects__text-part {
+        display: flex;
+        flex-direction: column;
+        width: 43%;
+        background-color: rgb(251, 251, 251);
+        justify-content: center;
+        row-gap: 1.5em;
+        padding-left: 2em;
+    }
+    
+    .projects__h2-title {
+        padding-top: 0,5em;
+    }
+    
+    .projects-overview__button-wrapper__viewmore { /*этот класс - есть в Styles.css justify-con.center. Заменила - и все равно при изменении размера уезжает*/
+        display: flex;/*было скрыто*/
+        justify-content: flex-start; /*flex-end - в середине экрана*/
+        /*flex-wrap: nowrap; - на айфоне уплывает*/
+        width: 10%;
+        max-width: 100%;
+        height: auto;
+        padding-top: 5em;
+    }
+    
+    .projects__slider-wrapper {
+        margin-bottom: 12vh;
+        padding-bottom: 6vh;
+    }
+    
 }
+
+
+
+
+
+
+
+
+
 
 /*Adative for tablet*/
 
@@ -190,6 +372,14 @@ flex-basis: auto;
 
 }
 
+
+
+
+
+
+
+
+
 /*Adative for desktop*/
 
 @media screen and (min-width:1024px) and (max-width:5001px) { 
@@ -208,12 +398,22 @@ flex-basis: auto;
 }
 
 
+
+
 /*<picture> 
 	<source srcset="img_smallflower.jpg" media="(max-width: 600px)"> 
 	<source srcset="img_flowers.jpg" media="(max-width: 1500px)"> 
 	<source srcset="flowers.jpg"> <img src="img_smallflower.jpg" alt="Flowers">
 </picture>*/
 
+/*Мой вариант:
+<picture> 
+	<source srcset="assets/img/page-projects/sample-project3-s.png" media="(max-width: 1023px)">
+	<source srcset="assets/img/page-projects/sample-project3.png" media="(max-width: 5000px)"> 
+	<source srcset="assets/img/page-projects/sample-project3.png"> <img src="assets/img/page-projects/sample-project3.png" alt="Sample 1,2,3!!!!">
+</picture>*/
+
+assets/img/page-projects/sample-project3.png
 
 /*@media (orientation: landscape) { 
     #background-image { background: url(image1.png) no-repeat; }
@@ -236,4 +436,4 @@ flex-basis: auto;
 
 /**/
 /**/
-  /**/
+/**/
