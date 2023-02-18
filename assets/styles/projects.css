@@ -6,24 +6,24 @@
 html {
     height: 100%;
 }
-
+  
 html, body {
     overflow-x: hidden;  
 }
 
 .projects {
     display: grid;
+    justify-self: center;
     width: 80vw;
+    height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 2% auto 10%;
+    grid-template-rows: 10% 2% auto 10%; /*не может ли 'переполнять'? визуально хэдеру хватит и 5% */
     grid-template-areas:
     "all-pages__title"
     "projects__line"
     "projects__samples"
     "slider";
-    justify-self: center;
 }    
-
 
 .all-pages__title {
     grid-area: all-pages__title;
@@ -35,7 +35,6 @@ html, body {
     width: 80vw;
     height: 1px;
     justify-self: stretch; 
-    background-color:rgb(242, 242, 242);
 }
 
 .projects__samples {
@@ -43,7 +42,10 @@ html, body {
     justify-content: center;
     grid-area: projects__samples;
     display: grid;
-    grid-template-columns: 1fr;
+    /*display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; - не ровняет*/
+    grid-template-columns: 1fr; /*repeat(auto-fill);*/
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
     "projects__sample1"
@@ -58,28 +60,17 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     align-content: flex-end;
-    /*justify-self: flex-start; flex-end;
-    justify-content: flex-start; - не работает*/
-    background-color: aquamarine;
-    margin-bottom: 7em;
+    margin-bottom: 6em;
 }
-
 
 .projects__sample1,
 .projects__sample2,
 .projects__sample3 {
     display: flex;
     flex-direction: row;
-    margin-bottom: 3em;
     flex-wrap: wrap;
-    min-width: 500;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-justify-content: flex-end;
- /* 6 строк - не работают*/
-
-}
+    margin-bottom: 3em;
+}    
 
 .projects__sample1 {
     grid-area: projects__sample1;
@@ -108,49 +99,67 @@ height: auto;
 .projects__text-part {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 43%;
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(251, 251, 251); 
     justify-content: center;
     row-gap: 1.5em;
-    padding-left: 2em;
+    padding-left: 0em;
 }
 
 .projects__h2-title {
     padding-top: 0,5em;
+    font-size: 3em;
 }
 
-.projects-overview__button-wrapper {
-    justify-content: flex-start;
-    padding-top: 5em;
+.projects__button-wrapper { 
+    display: flex;/*было скрыто*/
+    justify-content: flex-start; /*flex-end - в середине экрана*/
+    /*flex-wrap: nowrap; - на айфоне уплывает*/
+    /* margin-bottom: 2em; - в styles.css*/
+    width: 10%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: 1%;
+    /*padding-top: 5em;*/
 }
 
-/*.projects__box {
-flex-grow: 0;
-flex-shrink: 1;
-flex-basis: auto; 
+.projects__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    height: 4.5em;
+    width: 14em;
+    background-color: #FFFFFF;
+    color: #333333;
+   /* letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding-left: 1.25em; - свойства в styles.css*/
+
 }
-Вставила в класс projects__sample1.
-Вставила в класс project__sample1, ...2, ...3
-Выделила в отдельный класс и повесила в хтмл на projects__sample1. Без результата.
-и повесила в хтмл на projects__text-part. То же, не стоило
-Вставила в класс project__sample1, ...2, ...3 flex-wrap: wrap; 
-Туда же - min-width: 100 и 500;
-Туда же - justify-content: flex-end;*/
 
-
-/* Adaptive #  */
-/**/
-
-/*@media screen and (min-width:249px) and (max-width:767px) { 
+.projects__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: *#FFFFFF;
 }
-*/ 
+
+.projects__slider-wrapper {
+    margin-bottom: 12vh;
+    padding-bottom: 6vh;
+}
 
 
 
-/*Adative for smartphone*/
 
-@media screen and (min-width: 249px) and (max-width:767px) { 
-    .projects {
+
+/*Adative - Smartphone 767*/
+
+@media screen and (min-width: 249px) and (max-width:1279px) { 
+    /* .projects {
         display: grid;
         width: 80vw;
         grid-template-columns: 1fr;
@@ -161,16 +170,260 @@ flex-basis: auto;
         "projects__samples"
         "slider";
         justify-self: center;
-    }  
+    }  */
+    
+
+  
+    
+     /*  .all-pages__title {
+        grid-area: all-pages__title;
+    }*/
+    
+    /* Далее не адаптировано - просто скопировано */
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    html {
+        height: 100%;
+    }
+    
+    html, body {
+        overflow-x: hidden;  
+    }
+    
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        width: 80vw;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 2% auto 10%;
+        grid-template-areas:
+        "all-pages__title"
+        "projects__line"
+        "projects__samples"
+        "slider";/*если удалить все гриды - уезжает при масштабировании*/
+
+    }    
+
+    
+    /*.projects {
+        display: grid;
+        width: 80vw;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 2% auto 10%;
+        grid-template-areas:
+        "all-pages__title"
+        "projects__line"
+        "projects__samples"
+        "slider";
+        justify-self: center;
+    }  */
+    
+    
+    .all-pages__title {   /* Не удалять! */
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0.5em;
+        grid-area: all-pages__title;
+       /* display: flex;
+        flex-direction: column;
+        justify-content: center;*/
+        }
+    
+    .projects__line {
+        grid-area: projects__line;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80vw;
+        height: 1px;
+        justify-self: stretch; 
+        background-color:rgb(242, 242, 242);
+        margin-bottom: 2em;
+    }
+    
+    .projects__samples {
+        grid-area: projects__samples;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80vw;
+    }
+    
+    .projects__sample1,
+    .projects__sample2,
+    .projects__sample3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3em;
+        min-width: 200px;
+    }    
+    
+    /*.projects__sample1 {
+        grid-area: projects__sample1;
+    }
+    
+    .projects__sample2 {
+        grid-area: projects__sample2;
+    }
+    
+    .projects__sample3 {
+        grid-area: projects__sample3;
+    } гриды по логике не нужны, но если убрать, уезжает*/
+    
+    .projects__img-part {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(251, 251, 251);
+    }
+    
+    .projects__img {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    }
+    
+    .projects__text-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(251, 251, 251); 
+        justify-content: center;
+        row-gap: 1.5em;
+        padding-bottom: 5em;
+    }
+    
+    .projects__h2-title {
+        padding-top: 0,5em;
+        font-size: 2em;
+        padding-top: 5%;
+    }
+    
+    .projects__button-wrapper { 
+        display: flex;
+        flex-direction: row-reverse; /*наколхозила*/
+        justify-content: flex-center; /*наколхозила*/
+        position: relative;
+        left: 50px;
+        width: 10%;
+        max-width: 10%;
+        height: auto;
+        padding-top: 5em;
+    }
+    
+    .projects__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        height: 4.5em;
+        width: 10em;
+        background-color: #FFFFFF;
+        color: #333333;
+        letter-spacing: 0.2em;
+        /*text-transform: uppercase;
+        padding-left: 1.25em;        - свойства в styles.css*/
+        margin-left: 5em; /*наколхозила*/
+    }
+    
+    .projects__link {
+        text-decoration: none;
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+    
+    .projects__slider-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1vh;
+        padding-bottom: 6vh;
+    }
+    
+    .slider {
+        grid-area: slider;
+        display: flex;
+        flex-direction: row;
+        /*grid-template-columns: 1fr;
+        grid-template-rows: 1fr;*/
+        align-content: flex-end;
+        margin-bottom: 0em;
+    }
     
     .footer {
-        display: none;    
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 55% 45%;
     }
+        
+    .footer__logo-big {
+        display: none;
+    }
+        
+    .footer__content {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+        
+    .footer__nav-list {
+        display: none;
+    }
+        
+    .footer__address {
+        display: none;
+    }
+        
+    .footer__tel {
+        display: none;
+    }
+        
+    .footer__email {
+        display: none;
+    }
+        
+    .footer__socials-icons-all {
+        display: none;
+    }
+    
+    .footer__title {
+        font-size: 0.7em;
+        font-weight: 400;  
+    }
+        
+    .footer__copyright {
+        margin-bottom: 20px;
+    }
+    
 }
 
-/*Adative for tablet*/
 
-@media screen and (min-width:768px) and (max-width:1023px) {
+
+
+
+
+
+
+
+
+/*Adative for tablet    Какие-то скобки где-то лишние/удаленные*/
+
+/*@media screen and (min-width:768px) and (max-width:1023px) {
     .projects {
         display: grid;
         width: 80vw;
@@ -186,9 +439,17 @@ flex-basis: auto;
     
     .footer {
         display: none;    /*???*/
-    }
+   /* }
 
-}
+}*/
+
+
+
+
+
+
+
+
 
 /*Adative for desktop*/
 
@@ -208,12 +469,20 @@ flex-basis: auto;
 }
 
 
+
+
 /*<picture> 
 	<source srcset="img_smallflower.jpg" media="(max-width: 600px)"> 
 	<source srcset="img_flowers.jpg" media="(max-width: 1500px)"> 
 	<source srcset="flowers.jpg"> <img src="img_smallflower.jpg" alt="Flowers">
 </picture>*/
 
+/*Мой вариант:
+<picture> 
+	<source srcset="assets/img/page-projects/sample-project3-s.png" media="(max-width: 1023px)">
+	<source srcset="assets/img/page-projects/sample-project3.png" media="(max-width: 5000px)"> 
+	<source srcset="assets/img/page-projects/sample-project3.png"> <img src="assets/img/page-projects/sample-project3.png" alt="Sample 1,2,3!!!!">
+</picture>*/
 
 /*@media (orientation: landscape) { 
     #background-image { background: url(image1.png) no-repeat; }
@@ -234,6 +503,11 @@ flex-basis: auto;
   }*/
 
 
+
+  /*  word-break: break-word; /*ничего не поменялось - нашла в styles - удалить после успешной адаптации
+    hyphens: manual; */
+
+
 /**/
 /**/
-  /**/
+/**/

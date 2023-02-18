@@ -16,6 +16,7 @@
   </head>
   <body>
     <div class="wrapper">
+
       <!-- Header -->
 
       <header class="header">
@@ -73,21 +74,27 @@
       <!-- Main -->
 
       <main class="projects">
+
         <!-- Title -->
+
         <!--Удалить <section class="projects__general"> ? -->
+        
         <h1 class="all-pages__title">
-          <span class="h1__title-1">Our</span>
+          <span class="h1__title-1">Our </span> 
           <span class="h1__title-2">Projects</span>
         </h1>
 
         <!-- Line -->
 
-        <section class="projects__line"></section>
+        <section class="projects__line">
+        </section>
 
         <!-- Samples -->
 
         <section class="projects__samples">
-          <!-- Sample1 -->
+
+          <!-- Sample 1 -->
+
           <div class="projects__sample1">
             <!-- Убрала класс  projects__samples , ибо картинка и текст выстраиваются в столбец  -->
             <div class="projects__img-part">
@@ -101,22 +108,25 @@
             <div class="projects__text-part">
               <h2 class="h2-title projects__h2-title">Sample Project 1</h2>
               <!-- /* изменить и прописать размер? */ -->
-              <p class="about__text">
+              <p class="text-1">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </p>
-              <!--Заменить about__text когда Даша подправит" -->
-              <div class="projects-overview__button-wrapper">
+              <div class="projects__button-wrapper">
                 <form>
-                  <button class="button-color1 projects-overview__button">
+                  <a class="projects__link" href="#">
+                    <button class="projects__button"><!-- button-color1 -->
                     VIEW MORE &nbsp; &rarr;
-                  </button>
+                    </button>
+                  </a>
                 </form>
               </div>
             </div>
           </div>
+
+          <!-- Sample 2 -->
 
           <div class="projects__samples projects__sample2">
             <div class="projects__img-part">
@@ -130,25 +140,27 @@
             <div class="projects__text-part">
               <h2 class="h2-title projects__h2-title">Sample Project 2</h2>
               <!-- /* изменить и прописать размер? */ -->
-              <p class="about__text">
+              <p class="text-1">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                of type and scrambled it to make a type specimen book. 
               </p>
-              <!--Заменить about__text когда Даша подправит" -->
-              <div class="projects-overview__button-wrapper">
-                <form>
-                  <button class="button-color1 projects-overview__button">
+              <div class="projects__button-wrapper">
+                <!--<form> -->
+                  <a class="projects__link" href="#">
+                    <button class="projects__button">
                     VIEW MORE &nbsp; &rarr;
-                  </button>
-                </form>
+                    </button>
+                  </a>
+                <!--</form> -->
               </div>
             </div>
           </div>
           <!-- /* изменить второй класс прописать расположение у себя */ -->
 
           <!-- Sample 3 -->
+
           <div class="projects__samples projects__sample3">
             <div class="projects__img-part">
               <img
@@ -161,48 +173,26 @@
             <div class="projects__text-part">
               <h2 class="h2-title projects__h2-title">Sample Project 3</h2>
               <!-- /* изменить и прописать размер? */ -->
-              <p class="about__text">
+              <p class="text-1">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </p>
-              <!--Заменить about__text когда Даша подправит" -->
-              <div class="projects-overview__button-wrapper">
+              <div class="projects__button-wrapper">
                 <form>
-                  <button class="button-color1 projects-overview__button">
+                  <a class="projects__link" href="#">
+                    <button class="projects__button">
                     VIEW MORE &nbsp; &rarr;
-                  </button>
+                    </button>
+                  </a>
                 </form>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Slider -->
-        <!-- <section class="slider">
-              <form class="main__button">
-                <div class="div__1__p__all">
-                  <p class="p__all">0</p>
-                  <p class="p__all">1</p>
-                </div>
-                <div class="div__2__main__gallery__pages__2">
-                  <p class="main__gallery__pages__2">/ &nbsp;</p>
-                </div>
-                <div class="div__3__main__gallery__pages__2">
-                  <p class="main__gallery__pages__2">&nbsp;05</p>
-                </div>
-                <div class="main__gallery__button__1">
-                  <a class="gallery__button__1" href="index.html">
-                    &nbsp; &larr;
-                  </a>
-                </div>
-                <div class="main__gallery__button__2">
-                  <a class="gallery__button__2" href="#"> &nbsp; &rarr; </a>
-                </div>
-              </form>
-            </section>-->
-        <section class="slider">
+        <section class="slider projects__slider-wrapper">
           <div class="slider__text-part">
             <p class="slider__page-number">
               <span class="slider__page-number-1">0</span>
@@ -242,9 +232,9 @@
               ><p class="footer__title footer__nav-title">Information</p></a
             >
             <ul class="footer__nav-list">
-              <li><a class="footer__link" href="#">Gallery</a></li>
-              <li><a class="footer__link" href="#">Projects</a></li>
-              <li><a class="footer__link" href="#">Main</a></li>
+              <li><a class="footer__link" href="gallery.html">Gallery</a></li>
+              <li><a class="footer__link" href="projects.html">Projects</a></li>
+              <li><a class="footer__link" href="index.html">Main</a></li>
               <li><a class="footer__link" href="#">Certifications</a></li>
               <li><a class="footer__link" href="#">Contacts</a></li>
             </ul>
@@ -339,8 +329,9 @@
         </div>
 
         <!-- Footer Copyright -->
+
         <div class="footer__copyright">&copy; 2021 All Rights Reserved</div>
       </footer>
     </div>
   </body>
-</html>
+</html
