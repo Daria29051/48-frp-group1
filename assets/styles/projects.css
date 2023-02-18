@@ -6,7 +6,7 @@
 html {
     height: 100%;
 }
-
+  
 html, body {
     overflow-x: hidden;  
 }
@@ -14,7 +14,6 @@ html, body {
 .projects {
     display: grid;
     width: 80vw;
-/*    min-width: 300px; - Для ликвидации переполнения*/
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 10% 2% auto 10%; /*не может ли 'переполнять'? визуально хэдеру хватит и 5% */
@@ -24,6 +23,7 @@ html, body {
     "projects__samples"
     "slider";
     justify-self: center;
+    background-color: bisque; /*Удалить всю строку*/
 }    
 
 .all-pages__title {
@@ -50,8 +50,6 @@ html, body {
     "projects__sample1"
     "projects__sample2"
     "projects__sample3";
-    word-break: break-word; /*ничего не поменялось - нашла в styles - удалить после успешной адаптации*/
-    hyphens: manual; /*не работает*/
 }
 
 .slider {
@@ -61,9 +59,7 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     align-content: flex-end;
-    /*justify-self: flex-start; flex-end;
-    justify-content: flex-start; - не работает*/
-    background-color: aquamarine; /*не работает*/
+    background-color: aquamarine; 
     margin-bottom: 6em;
 }
 
@@ -75,25 +71,10 @@ html, body {
     flex-wrap: wrap;
     margin-bottom: 3em;
     min-width: 500;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    justify-content: flex-end;
+}    
 
- /* 6 строк - не работают
-     max-width: 600px;
-     */
- /*min-width: 100-450-1000px; - без реакции*/
-}
-/*- не помогает перенети блок с текстом*/
-    word-break: break-word; /*ничего не поменялось - нашла в styles - удалить после успешной адаптации*/
-    hyphens: manual;/*не работает*/
-    
 .projects__sample1 {
     grid-area: projects__sample1;
-    display: flex; /*не работает*/
-    flex-direction: row; /*не работает*/
-    flex-wrap: wrap; /*не работает*/
 }
 
 .projects__sample2 {
@@ -107,14 +88,12 @@ html, body {
 .projects__img-part {
     width: 57%;
     background-color: rgb(251, 251, 251);
-/*min-width: 450px; - и др. размеры - не помогают*/
 }
 
 .projects__img {
 overflow: hidden;
 width: 100%;
 max-width: 100%;
-/*min-width: 450px; - и др. размеры - не помогают*/
 height: auto;
 }
 
@@ -122,7 +101,7 @@ height: auto;
     display: flex;
     flex-direction: column;
     width: 43%;
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(251, 251, 251); 
     justify-content: center;
     row-gap: 1.5em;
     padding-left: 2em;
@@ -132,14 +111,37 @@ height: auto;
     padding-top: 0,5em;
 }
 
-.projects-overview__button-wrapper__viewmore { /*этот класс - есть в Styles.css justify-con.center. Заменила - и все равно при изменении размера уезжает*/
+.projects__button-wrapper { 
     display: flex;/*было скрыто*/
     justify-content: flex-start; /*flex-end - в середине экрана*/
     /*flex-wrap: nowrap; - на айфоне уплывает*/
+    /* margin-bottom: 2em; - в styles.css*/
     width: 10%;
     max-width: 100%;
     height: auto;
     padding-top: 5em;
+}
+
+.projects__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    height: 4.5em;
+    width: 14em;
+    background-color: #FFFFFF;
+    color: #333333;
+   /* letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding-left: 1.25em; - свойства в styles.css*/
+    background-color: deepskyblue; /*удалить всю строку*/
+}
+
+.projects__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: *#FFFFFF;
 }
 
 .projects__slider-wrapper {
@@ -148,33 +150,13 @@ height: auto;
 }
 
 
-/*.projects__box {
-flex-grow: 0;
-flex-shrink: 1;
-flex-basis: auto; 
-}
-Вставила в класс projects__sample1.
-Вставила в класс project__sample1, ...2, ...3
-Выделила в отдельный класс и повесила в хтмл на projects__sample1. Без результата.
-и повесила в хтмл на projects__text-part. То же, не стоило
-Вставила в класс project__sample1, ...2, ...3 flex-wrap: wrap; 
-Туда же - min-width: 100 и 500;
-Туда же - justify-content: flex-end;*/
-
-
-/* Adaptive #  */
-/**/
-
-/*@media screen and (min-width:249px) and (max-width:767px) { 
-}
-*/ 
 
 
 
-/*Adative for smartphone*/
+/*Adative - Smartphone*/
 
 @media screen and (min-width: 249px) and (max-width:767px) { 
-    .projects {
+    /* .projects {
         display: grid;
         width: 80vw;
         grid-template-columns: 1fr;
@@ -185,11 +167,8 @@ flex-basis: auto;
         "projects__samples"
         "slider";
         justify-self: center;
-    }  
+    }  */
     
-    .footer {   /* Не удалять! */
-        display: none;    
-    }
 
     .all-pages__title {   /* Не удалять! */
     margin: auto;
@@ -213,9 +192,9 @@ flex-basis: auto;
         justify-self: center;
     }    
     
-    .all-pages__title {
+     /*  .all-pages__title {
         grid-area: all-pages__title;
-    }
+    }*/
     
     /* Далее не адаптировано - просто скопировано */
     
@@ -231,61 +210,65 @@ flex-basis: auto;
     html, body {
         overflow-x: hidden;  
     }
+    
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        width: 80vw;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 2% auto 10%;
+        grid-template-areas:
+        "all-pages__title"
+        "projects__line"
+        "projects__samples"
+        "slider";/*если удалить все гриды - уезжает при масштабировании*/
 
+        background-color: bisque; /*Удалить всю строку*/
+    }    
+    
+    .all-pages__title {
+        grid-area: all-pages__title;
+       /* display: flex;
+        flex-direction: column;
+        justify-content: center;*/
+    }
+    
     .projects__line {
         grid-area: projects__line;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 80vw;
         height: 1px;
         justify-self: stretch; 
         background-color:rgb(242, 242, 242);
+        margin-bottom: 2em;
     }
     
     .projects__samples {
-        width: 80vw;
-        justify-content: center;
         grid-area: projects__samples;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-        "projects__sample1"
-        "projects__sample2"
-        "projects__sample3";
-        word-break: break-word;
-        hyphens: manual;
-    }
-    
-    .slider {
-        grid-area: slider;
         display: flex;
-        flex-direction: row;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        align-content: flex-end;
-        background-color: aquamarine; 
-        margin-bottom: 6em;
+        flex-direction: column;
+        justify-content: center;
+        width: 80vw;
     }
     
     .projects__sample1,
     .projects__sample2,
     .projects__sample3 {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
         flex-wrap: wrap;
         margin-bottom: 3em;
         min-width: 500;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        justify-content: flex-end;
-    }
-  
-    .projects__sample1 {
+    }    
+    
+    /*.projects__sample1 {
         grid-area: projects__sample1;
-        display: flex; /*не работает*/
-        flex-direction: row; /*не работает*/
-        flex-wrap: wrap; /*не работает*/
     }
     
     .projects__sample2 {
@@ -294,49 +277,130 @@ flex-basis: auto;
     
     .projects__sample3 {
         grid-area: projects__sample3;
-    }
+    } гриды по логике не нужны, но если убрать, уезжает*/
     
     .projects__img-part {
-        width: 57%;
+        display: flex;
+        justify-content: center;
+        width: 100%;
         background-color: rgb(251, 251, 251);
-    /*min-width: 450px; - и др. размеры - не помогают*/
     }
     
     .projects__img {
     overflow: hidden;
     width: 100%;
     max-width: 100%;
-    /*min-width: 450px; - и др. размеры - не помогают*/
     height: auto;
     }
     
     .projects__text-part {
         display: flex;
         flex-direction: column;
-        width: 43%;
-        background-color: rgb(251, 251, 251);
+        align-items: center;
+        width: 100%;
+        background-color: rgb(251, 251, 251); 
         justify-content: center;
         row-gap: 1.5em;
-        padding-left: 2em;
+        padding-bottom: 2em;
     }
     
     .projects__h2-title {
         padding-top: 0,5em;
     }
     
-    .projects-overview__button-wrapper__viewmore { /*этот класс - есть в Styles.css justify-con.center. Заменила - и все равно при изменении размера уезжает*/
-        display: flex;/*было скрыто*/
-        justify-content: flex-start; /*flex-end - в середине экрана*/
-        /*flex-wrap: nowrap; - на айфоне уплывает*/
+    .projects__button-wrapper { 
+        display: flex;
+        justify-content: flex-start; 
         width: 10%;
         max-width: 100%;
         height: auto;
         padding-top: 5em;
     }
     
+    .projects__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        height: 4.5em;
+        width: 14em;
+        background-color: #FFFFFF;
+        color: #333333;
+       /* letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding-left: 1.25em; - свойства в styles.css*/
+        background-color: deepskyblue; /*удалить всю строку*/
+    }
+    
+    .projects__link {
+        text-decoration: none;
+        cursor: pointer;
+        color: *#FFFFFF;
+    }
+    
     .projects__slider-wrapper {
-        margin-bottom: 12vh;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1vh;
         padding-bottom: 6vh;
+    }
+    
+    .slider {
+        grid-area: slider;
+        display: flex;
+        flex-direction: row;
+        /*grid-template-columns: 1fr;
+        grid-template-rows: 1fr;*/
+        align-content: flex-end;
+        background-color: aquamarine; 
+        margin-bottom: 6em;
+    }
+    
+    .footer {
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 55% 45%;
+    }
+        
+    .footer__logo-big {
+        display: none;
+    }
+        
+    .footer__content {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+        
+    .footer__nav-list {
+        display: none;
+    }
+        
+    .footer__address {
+        display: none;
+    }
+        
+    .footer__tel {
+        display: none;
+    }
+        
+    .footer__email {
+        display: none;
+    }
+        
+    .footer__socials-icons-all {
+        display: none;
+    }
+    
+    .footer__title {
+        font-size: 0.7em;
+        font-weight: 400;  
+    }
+        
+    .footer__copyright {
+        margin-bottom: 20px;
     }
     
 }
@@ -350,9 +414,9 @@ flex-basis: auto;
 
 
 
-/*Adative for tablet*/
+/*Adative for tablet    Какие-то скобки где-то лишние/удаленные*/
 
-@media screen and (min-width:768px) and (max-width:1023px) {
+/*@media screen and (min-width:768px) and (max-width:1023px) {
     .projects {
         display: grid;
         width: 80vw;
@@ -368,9 +432,9 @@ flex-basis: auto;
     
     .footer {
         display: none;    /*???*/
-    }
+   /* }
 
-}
+}*/
 
 
 
@@ -430,6 +494,11 @@ flex-basis: auto;
 @media print and (min-resolution: 300dpi) {
     / Стили CSS ... / 
   }*/
+
+
+
+  /*  word-break: break-word; /*ничего не поменялось - нашла в styles - удалить после успешной адаптации
+    hyphens: manual; */
 
 
 /**/
