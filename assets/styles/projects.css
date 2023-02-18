@@ -13,6 +13,7 @@ html, body {
 
 .projects {
     display: grid;
+    justify-self: center;
     width: 80vw;
     height: auto;
     grid-template-columns: 1fr;
@@ -22,8 +23,6 @@ html, body {
     "projects__line"
     "projects__samples"
     "slider";
-    justify-self: center;
-    background-color: bisque; /*Удалить всю строку*/
 }    
 
 .all-pages__title {
@@ -36,7 +35,6 @@ html, body {
     width: 80vw;
     height: 1px;
     justify-self: stretch; 
-    background-color:rgb(242, 242, 242);
 }
 
 .projects__samples {
@@ -44,7 +42,10 @@ html, body {
     justify-content: center;
     grid-area: projects__samples;
     display: grid;
-    grid-template-columns: 1fr;
+    /*display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; - не ровняет*/
+    grid-template-columns: 1fr; /*repeat(auto-fill);*/
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
     "projects__sample1"
@@ -59,7 +60,6 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     align-content: flex-end;
-    background-color: aquamarine; 
     margin-bottom: 6em;
 }
 
@@ -70,7 +70,6 @@ html, body {
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 3em;
-    min-width: 500;
 }    
 
 .projects__sample1 {
@@ -100,15 +99,17 @@ height: auto;
 .projects__text-part {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 43%;
     background-color: rgb(251, 251, 251); 
     justify-content: center;
     row-gap: 1.5em;
-    padding-left: 2em;
+    padding-left: 0em;
 }
 
 .projects__h2-title {
     padding-top: 0,5em;
+    font-size: 3em;
 }
 
 .projects__button-wrapper { 
@@ -119,7 +120,9 @@ height: auto;
     width: 10%;
     max-width: 100%;
     height: auto;
-    padding-top: 5em;
+    position: relative;
+    top: 1%;
+    /*padding-top: 5em;*/
 }
 
 .projects__button {
@@ -135,7 +138,7 @@ height: auto;
    /* letter-spacing: 0.2em;
     text-transform: uppercase;
     padding-left: 1.25em; - свойства в styles.css*/
-    background-color: deepskyblue; /*удалить всю строку*/
+
 }
 
 .projects__link {
@@ -153,9 +156,9 @@ height: auto;
 
 
 
-/*Adative - Smartphone*/
+/*Adative - Smartphone 767*/
 
-@media screen and (min-width: 249px) and (max-width:767px) { 
+@media screen and (min-width: 249px) and (max-width:1279px) { 
     /* .projects {
         display: grid;
         width: 80vw;
@@ -170,27 +173,7 @@ height: auto;
     }  */
     
 
-    .all-pages__title {   /* Не удалять! */
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 0.5em;
-    }
-
-    .projects {
-        display: grid;
-        width: 80vw;
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: 10% 2% auto 10%;
-        grid-template-areas:
-        "all-pages__title"
-        "projects__line"
-        "projects__samples"
-        "slider";
-        justify-self: center;
-    }    
+  
     
      /*  .all-pages__title {
         grid-area: all-pages__title;
@@ -226,15 +209,35 @@ height: auto;
         "projects__samples"
         "slider";/*если удалить все гриды - уезжает при масштабировании*/
 
-        background-color: bisque; /*Удалить всю строку*/
     }    
+
     
-    .all-pages__title {
+    /*.projects {
+        display: grid;
+        width: 80vw;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 2% auto 10%;
+        grid-template-areas:
+        "all-pages__title"
+        "projects__line"
+        "projects__samples"
+        "slider";
+        justify-self: center;
+    }  */
+    
+    
+    .all-pages__title {   /* Не удалять! */
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0.5em;
         grid-area: all-pages__title;
        /* display: flex;
         flex-direction: column;
         justify-content: center;*/
-    }
+        }
     
     .projects__line {
         grid-area: projects__line;
@@ -264,7 +267,7 @@ height: auto;
         justify-content: center;
         flex-wrap: wrap;
         margin-bottom: 3em;
-        min-width: 500;
+        min-width: 200px;
     }    
     
     /*.projects__sample1 {
@@ -301,18 +304,23 @@ height: auto;
         background-color: rgb(251, 251, 251); 
         justify-content: center;
         row-gap: 1.5em;
-        padding-bottom: 2em;
+        padding-bottom: 5em;
     }
     
     .projects__h2-title {
         padding-top: 0,5em;
+        font-size: 2em;
+        padding-top: 5%;
     }
     
     .projects__button-wrapper { 
         display: flex;
-        justify-content: flex-start; 
+        flex-direction: row-reverse; /*наколхозила*/
+        justify-content: flex-center; /*наколхозила*/
+        position: relative;
+        left: 50px;
         width: 10%;
-        max-width: 100%;
+        max-width: 10%;
         height: auto;
         padding-top: 5em;
     }
@@ -324,19 +332,19 @@ height: auto;
         border: none;
         cursor: pointer;
         height: 4.5em;
-        width: 14em;
+        width: 10em;
         background-color: #FFFFFF;
         color: #333333;
-       /* letter-spacing: 0.2em;
-        text-transform: uppercase;
-        padding-left: 1.25em; - свойства в styles.css*/
-        background-color: deepskyblue; /*удалить всю строку*/
+        letter-spacing: 0.2em;
+        /*text-transform: uppercase;
+        padding-left: 1.25em;        - свойства в styles.css*/
+        margin-left: 5em; /*наколхозила*/
     }
     
     .projects__link {
         text-decoration: none;
         cursor: pointer;
-        color: *#FFFFFF;
+        color: #FFFFFF;
     }
     
     .projects__slider-wrapper {
@@ -353,8 +361,7 @@ height: auto;
         /*grid-template-columns: 1fr;
         grid-template-rows: 1fr;*/
         align-content: flex-end;
-        background-color: aquamarine; 
-        margin-bottom: 6em;
+        margin-bottom: 0em;
     }
     
     .footer {
