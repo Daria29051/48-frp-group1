@@ -2,22 +2,18 @@
 
 ![logo for readme](https://user-images.githubusercontent.com/119349154/219104264-538e0a34-490c-4817-8eac-28e2cc1e8ea4.png)
 
-## Функционал сайта:
+## Functionality
+This is a typical informational website, designed for an architecture company.<br><br>
+It includes:<br>
+ &bull; Navigation through pages via menu or clicker <br>
+ &bull; Interactive contact form
 
-- Посещение платформы в качестве гостя.
-- Ввод контактных данных.
-- Перемещение между страницами сайта.
 
-## Использованные технологии:
 
-<div> 
-<img alt="Github" src="https://img.shields.io/badge/-Github-black?style=for-the-badge&logo=github&logoColor=white" />
-<img alt="CSS" src="https://img.shields.io/badge/-CSS-F05032?style=for-the-badge&logo=CSS&logoColor=white" />
-<img alt="html" src="https://img.shields.io/badge/-html-pink?style=for-the-badge" />
-</div>
+## Technologies used:
+CSS, HTML, BEM
 
-## Наша команда:
-
+## Contributors:
 <h3>
   <a href="https://github.com/Daria29051">
     <img alt="Daria" src="https://img.shields.io/badge/-Daria-black?style=for-the-badge&logo=github&logoColor=white" />
