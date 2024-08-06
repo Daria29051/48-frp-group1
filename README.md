@@ -1,4 +1,5 @@
 # Architecture company site
+https://daria29051.github.io/48-frp-group1/
 
 ![logo for readme](https://user-images.githubusercontent.com/119349154/219104264-538e0a34-490c-4817-8eac-28e2cc1e8ea4.png)
 
