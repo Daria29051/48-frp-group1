@@ -7,7 +7,7 @@ https://daria29051.github.io/48-frp-group1/
 This is a typical informational website, designed for an architecture company.<br><br>
 It includes:<br>
  &bull; Navigation through pages via menu or clicker <br>
- &bull; Interactive contact form
+ &bull; Interactive contact form<br><br>
 
 
 
